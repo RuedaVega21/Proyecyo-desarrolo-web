@@ -1,6 +1,6 @@
-document.querySelector('#btnIngresar').addEventListener('click', inicarSesion);
+// document.querySelector('#btnIngresar').addEventListener('click', inicarSesion());
 
-function inicarSesion() {
+function inicarSesion(){
     var Correo = '';
     var Contra = '';
     var Acesso = false;
@@ -17,13 +17,15 @@ function inicarSesion() {
 
 function ingresar() {
     var rol = sessionStorage.getItem('rolActivo');
+    console.log(rol);
     switch (rol) {
         case '1':
+            console.log("pagina");
             window.location.href = 'pagina.html';
             break;
         default:
+            console.log("index");
             window.location.href = 'index.html';
             break;
     }
-
 }
