@@ -41,13 +41,12 @@ def db_login(request_data):
 
         array_user = get_user_data(username)
         if len(array_user) > 0:
-            user = array_user[0]
-            pass_user = user["password"]
+            pass_user = array_user["password"]
 
             pass_bytes = bytes(password, encoding="utf-8")
             pass_user_bytes = bytes(pass_user, encoding="utf-8")
             if bcrypt.checkpw(pass_bytes, pass_user_bytes):
-                array_user[0].pop("password")
+                array_user.pop("password")
                 data = array_user
                 status = "Success"
                 code = 200
