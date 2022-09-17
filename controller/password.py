@@ -1,4 +1,4 @@
-# byCript Admin
+# byCript
 import bcrypt
 from flask import Blueprint, session, abort, request, jsonify
 from flask import current_app
@@ -38,13 +38,15 @@ def db_login(request_data):
     try:
         username = request_data["user"]
         password = request_data["password"]
-
+        #Getting data from mongo
         array_user = get_user_data(username)
+        #Validating if user exists
         if len(array_user) > 0:
             pass_user = array_user["password"]
 
             pass_bytes = bytes(password, encoding="utf-8")
             pass_user_bytes = bytes(pass_user, encoding="utf-8")
+            #Comparing password
             if bcrypt.checkpw(pass_bytes, pass_user_bytes):
                 array_user.pop("password")
                 data = array_user
