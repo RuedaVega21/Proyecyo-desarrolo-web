@@ -1,16 +1,27 @@
 // document.querySelector('#btnIngresar').addEventListener('click', inicarSesion());
 
 function inicarSesion(){
-    var Correo = '';
-    var Contra = '';
-    var Acesso = false;
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
 
-    Correo = document.querySelector('#txtCorreo').value;
-    Contra = document.querySelector('#txtContra').value;
+var raw = JSON.stringify({
+    "txtCorreo": "jruedav@miumg.edu.gt",
+    "txtContra": "sebas"
+});
 
-    Acesso = ValidarUsuario(Correo, Contra);
+var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+};
+
+fetch("http://localhost:44490/api/login", requestOptions)
+    .then(response => response.json.parse(status))
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
     
-    if (Acesso == true) {
+    if (response.status == "Success") {
         ingresar();
     }
 }
@@ -21,7 +32,7 @@ function ingresar() {
     switch (rol) {
         case '1':
             console.log("pagina");
-            window.location.href = 'pagina2.html';
+            window.location.href = 'pagina.html';
             break;
         default:
             console.log("index");
