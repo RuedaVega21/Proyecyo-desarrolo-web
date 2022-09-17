@@ -21,7 +21,7 @@ function ingresar() {
     switch (rol) {
         case '1':
             console.log("pagina");
-            window.location.href = 'pagina.html';
+            window.location.href = 'pagina2.html';
             break;
         default:
             console.log("index");
