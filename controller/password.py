@@ -51,11 +51,11 @@ def db_login(request_data):
                 status = "Success"
                 code = 200
             else:
-                detail = "Incorrect pin"
+                detail = "Incorrect password"
                 data = ""
 
         else:
-            detail = "No operator with the phone number was found."
+            detail = "No user with this username was found."
     except Exception as e:
         status = "Error"
         detail = str(e)
