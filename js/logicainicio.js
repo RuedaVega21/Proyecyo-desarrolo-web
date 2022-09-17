@@ -5,8 +5,8 @@ var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-    "txtCorreo": "jruedav@miumg.edu.gt",
-    "txtContra": "sebas"
+    "user": "jruedav@miumg.edu.gt",
+    "password": "sebas"
 });
 
 var requestOptions = {
