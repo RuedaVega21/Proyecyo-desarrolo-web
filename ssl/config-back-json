@@ -1,0 +1,11 @@
+{
+  "Server": {
+    "ServerPort": "44230",
+    "EnvMode": "PROD",
+    "AppRoot": "/api",
+    "SessionName": "Name",
+    "Secret": "35pfRTtd2MiU2s3z5g57Hj8sfuc3cbeM"
+  },
+  "RestServerSec": "localhost",
+  "RestServer": "localhost"
+}
