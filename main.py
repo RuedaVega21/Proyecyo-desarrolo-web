@@ -13,7 +13,7 @@ from utils.environment import load_environment, get_environment
 #   Create app and load ENV
 #
 #load_environment("/usr/src/app/ssl/config-back-json")
-load_environment("C:\\Users\\Noemy\\Downloads\\Proyecyo-desarrolo-web\\ssl\\config-back-json")
+load_environment("/home/esgodra/dataFiles/Documentos/GitHub/Proyecyo-desarrolo-web/ssl/config-back-json")
 
 serverConfig = get_environment("Server")
 dictConfig({
