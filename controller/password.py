@@ -34,12 +34,18 @@ def get_user_by_password():
         abort(http_error_dict[type(e).__name__])
 
 def db_login(request_data):
+    logger = current_app.logger
     response = {}
+    data = ""
+    status = "Error"
+    detail = ""
+    code = 409
     try:
         username = request_data["user"]
         password = request_data["password"]
         #Getting data from mongo
         array_user = get_user_data(username)
+        logger.info(array_user)
         #Validating if user exists
         if len(array_user) > 0:
             pass_user = array_user["password"]
@@ -65,4 +71,4 @@ def db_login(request_data):
     response["data"] = data
     response["status"] = status
     response["detail"] = detail
-    return response
+    return response, code

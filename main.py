@@ -1,18 +1,15 @@
-from logging import root
-from flask import Flask, render_template, session, abort, redirect, url_for, request
+from flask import Flask
 from flask.logging import create_logger
 from logging.config import dictConfig
-from os import getenv
 from base64 import b64decode
 from json import dumps
-from jinja2.utils import url_quote
 from werkzeug.exceptions import BadRequest, Unauthorized, Conflict, ServiceUnavailable
 from utils.environment import load_environment, get_environment
 
 #
 #   Create app and load ENV
 #
-load_environment("/usr/src/app/ssl/config-back-json")
+load_environment("ssl/config-back-json")
 serverConfig = get_environment("Server")
 dictConfig({
     'version': 1,
@@ -31,6 +28,7 @@ dictConfig({
 })
 app = Flask(__name__)
 app.config['SESSION_COOKIE_NAME'] = serverConfig['SessionName']
+app.config['MONGO_URI'] = get_environment("Mongo")
 app.secret_key = b64decode(serverConfig['Secret'])
 rooturl = serverConfig['AppRoot']
 
@@ -106,6 +104,9 @@ def handle_service_unavailable(e):
     })
     response.content_type = type_response
     return response
+class App:
+    def get_app():
+        return app
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=443, ssl_context='adhoc')
