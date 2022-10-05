@@ -135,27 +135,3 @@ body{
 .sobre_el_parrafo{
     line-height: 1.7;
 }
-
-.menu_iconos{
-    padding: 80px;
-    display: grid;
-    width: 90%;
-    margin: 0;
-    gap: 1em;
-    overflow: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
-}
-
-.iconos{
-    display: grid;
-    gap: 1em;
-    justify-items: center;
-    width: 260px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.icono{
-    width: 40px;
-}
-
