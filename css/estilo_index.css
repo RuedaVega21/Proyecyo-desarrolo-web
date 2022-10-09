@@ -1,9 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(../img/fondo.jpg) no-repeat center top;
+  background: url(../Imagenes/fondo.jpg) no-repeat center top;
   background-size: cover;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   height: 100vh;
 }
 
