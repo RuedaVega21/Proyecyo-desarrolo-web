@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../Imagenes/Fondo-pagina.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 800px;
+    margin-top: 2.8rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+    width: 14rem;
+    margin: 0.5rem 0;
+}
+
+.field label {
+    font-size: 0.9rem;
+
+    margin-bottom: 0.2rem;
+
+    color: #000000;
+}
+
+.field input {
+    font-size: 1.1rem;
+
+    height: 2.2rem;
+    padding-left: 0.5rem;
+
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.field select {
+    font-size: 1.1rem;
+
+    width: 12rem;
+    height: 2.6rem;
+    padding-left: 0.5rem;
+
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+
+    width: 25rem;
+    margin: 0.75rem 0;
+}
+
+textarea {
+    font-size: 1.1rem;
+
+    max-width: 100%;
+    height: 5rem;
+    max-height: 15rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.textBox label {
+    font-size: 0.9rem;
+
+    margin-bottom: 0.2rem;
+
+    color: #000000;
+}
+
+.gustos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: 20rem;
+    margin: 0.75rem 0;
+}
+
+.gustos label {
+    font-size: 0.9rem;
+
+    margin-bottom: 0.2rem;
+
+    color: #000000;
+}
+
+.gustos div {
+    display: flex;
+    justify-content: flex-start;
+
+    width: 100%;
+    padding-left: 0.5rem;
+}
+
+.gustos div input {
+    width: 1rem;
+    height: 1rem;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin-top: 1.75rem;
+}
+
+.submit button {
+    font-size: 1.1rem;
+
+    padding: 1rem 1.5rem;
+
+    cursor: pointer;
+
+    border: 2px solid #000000;
+    border-radius: 4px;
+    background-color: lightcyan;
+}
+
+
+.parte2__container {
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.funcion_1 {
+    display: inline-block;
+    background-color: #000000;
+    justify-self: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 35px;
+}
