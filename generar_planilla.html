@@ -23,7 +23,15 @@
             </div>
             <div class='field'>
                 <label>Cargo</label>
-                <input name='cargo' type='name' autocomplete />
+                <select name='estadoCargo' required>
+                    <option selected disabled>Sel. una opción</option>
+                    <option>Front-End</option>
+                    <option>Back-End</option>
+                    <option>Bases de datos</option>
+                    <option>Full stack</option>
+                    <option>Redes</option>
+                    <option>Servicio tecnico</option>
+                </select>
             </div>
             <div class='field'>
                 <label>Horas trabajadas diarias</label>
@@ -48,7 +56,7 @@
             </div>
             <div class='field'>
                 <label>Jornada</label>
-                <select name='estadoLaboral' required>
+                <select name='estadoJornada' required>
                     <option selected disabled>Sel. una opción</option>
                     <option>Diurna</option>
                     <option>Nocturna</option>
@@ -56,8 +64,13 @@
                 </select>
             </div>
             <div class='field'>
-                <label>Descuento</label>
-                <input name='descuento' type='number' autocomplete />
+                <label>Descuentos</label>
+                <select name='estadoDescuento' required>
+                    <option selected disabled>Sel. una opción</option>
+                    <option>Diurna</option>
+                    <option>Nocturna</option>
+                    <option>Mixta</option>
+                </select>
             </div>
             <div class='textBox'>
                 <label>Otros datos</label>
