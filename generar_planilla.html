@@ -14,8 +14,12 @@
         <h1>Generación de Planillas</h1>
         <form>
             <div class='field'>
+                <label>Id empleado</label>
+                <input name='id' type='name' placeholder='0910' autocomplete />
+            </div>
+            <div class='field'>
                 <label>Nombre completo del Trabajador</label>
-                <input name='nombre' type='name' required value="Juan Rueda" placeholder='Nombre' autocomplete />
+                <input name='nombre' type='name' placeholder='Nombre' autocomplete />
             </div>
             <div class='field'>
                 <label>Sueldo base</label>
@@ -72,16 +76,7 @@
                     <option>Mixta</option>
                 </select>
             </div>
-            <div class='textBox'>
-                <label>Otros datos</label>
-                <textarea></textarea>
-            </div>
-            <div class='gustos'>
-                <label>¿Quieres recibir información
-                    relacionada con tus gustos?</label>
-                <div><input name='gustos' type='radio' />Sí</div>
-                <div><input name='gustos' type='radio' />No</div>
-            </div>
+            
             <div class='submit'>
                 <button>
                     GENERAR
