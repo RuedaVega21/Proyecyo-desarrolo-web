@@ -66,13 +66,12 @@ function captura() {
     if (estadoDescuento == 'Sel. una opción') {
             alert("Si no tiene descuento seleccione la opción ninguna");
             document.getElementById("estadoDescuento").focus();
-        }
+    }
 
-    const planilla = new Planilla(id, nombre, sueldo, estadoCargo,
+        const planilla = new Planilla(id, nombre, sueldo, estadoCargo,
         horas, horas_totales, horas_extras, estadoLaboral, estadoJornada, estadoDescuento);
         
         //console.log(id, nombre, sueldo, estadoCargo, horas, horas_totales, horas_extras, estadoLaboral, estadoJornada, estadoDescuento)
         console.log(planilla)
-    
     
 };
