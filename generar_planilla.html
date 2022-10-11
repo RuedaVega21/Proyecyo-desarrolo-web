@@ -15,19 +15,19 @@
         <form>
             <div class='field'>
                 <label>Id empleado</label>
-                <input name='id' type='name' placeholder='0910' autocomplete />
+                <input name='id' type='name' id="id" placeholder='0910' autocomplete />
             </div>
             <div class='field'>
                 <label>Nombre completo del Trabajador</label>
-                <input name='nombre' type='name' placeholder='Nombre' autocomplete />
+                <input name='nombre' type='name' id="nombre" placeholder='Nombre' autocomplete />
             </div>
             <div class='field'>
                 <label>Sueldo base</label>
-                <input name='sueldo' type='number' autocomplete />
+                <input name='sueldo' type='number' id="sueldo" autocomplete />
             </div>
             <div class='field'>
                 <label>Cargo</label>
-                <select name='estadoCargo' required>
+                <select name='estadoCargo' id="estadoCargo" required>
                     <option selected disabled>Sel. una opción</option>
                     <option>Front-End</option>
                     <option>Back-End</option>
@@ -39,19 +39,19 @@
             </div>
             <div class='field'>
                 <label>Horas trabajadas diarias</label>
-                <input name='horas' type='time' autocomplete />
+                <input name='horas' type='time' id="horas" autocomplete />
             </div>
             <div class='field'>
                 <label>Cantidad de horas totales</label>
-                <input name='horas_totales' type='number' autocomplete />
+                <input name='horas_totales' type='number' id="horas_totales" autocomplete />
             </div>
             <div class='field'>
                 <label>Horas extras</label>
-                <input name='horas_extras' type='number' autocomplete />
+                <input name='horas_extras' type='number' id="horas_extras" autocomplete />
             </div>
             <div class='field'>
                 <label>Estado laboral</label>
-                <select name='estadoLaboral' required>
+                <select name='estadoLaboral' id="estadoLaboral" required>
                     <option selected disabled>Sel. una opción</option>
                     <option>Desempleado</option>
                     <option>Trabajador</option>
@@ -60,7 +60,7 @@
             </div>
             <div class='field'>
                 <label>Jornada</label>
-                <select name='estadoJornada' required>
+                <select name='estadoJornada' id="estadoJornada" required>
                     <option selected disabled>Sel. una opción</option>
                     <option>Diurna</option>
                     <option>Nocturna</option>
@@ -69,7 +69,7 @@
             </div>
             <div class='field'>
                 <label>Descuentos</label>
-                <select name='estadoDescuento' required>
+                <select name='estadoDescuento' id="estadoDescuento" required>
                     <option selected disabled>Sel. una opción</option>
                     <option>ISR</option>
                     <option>IMSS</option>
@@ -78,7 +78,7 @@
                 </select>
             </div>
 
-            <div class='submit'>
+            <div class='submit' type="button" onclick="captura()">
                 <button>
                     GENERAR
                 </button>
@@ -88,5 +88,7 @@
     <section class="parte2__container container">
         <a href="pagina2.html" class="funcion_1">Volver</a>
     </section>
+
+    <script src="js/captura_de_datos_planilla.js"></script>
 </body>
 </html>

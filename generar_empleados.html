@@ -12,7 +12,7 @@
 <body>
     <main>
         <h1>Generación de empleados</h1>
-        <form id="product-form">
+        <form>
             <div class='field'>
                 <label>Id empleado</label>
                 <input name='id' type='number' id="id" placeholder='0910' autocomplete />
@@ -35,7 +35,7 @@
             </div>
             <div class='field'>
                 <label>Fecha de nacimiento</label>
-                <input name='fecha' type='number' id="fecha" placeholder='27/12/1999' autocomplete />
+                <input name='fecha' type='date' id="fecha" placeholder='27/12/1999' autocomplete />
             </div>
             <div class='field'>
                 <label>Dirección</label>
@@ -70,9 +70,10 @@
                     <option>Servicio técnico</option>
                 </select>
             </div>
-
             <div class='submit'>
-                <input type="submit" value="Crear" onclick="error()" >
+                <button type="button" onclick="captura()">
+                    GENERAR
+                </button>
             </div>
         </form>
     </main>
@@ -80,7 +81,7 @@
         <a href="pagina2.html" class="funcion_1">Volver</a>
     </section>
 
-    <script src="js/captura_de_datos.js"></script>
+    <script src="js/captura_de_datos_empleados.js"></script>
 </body>
 
 </html>
