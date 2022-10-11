@@ -100,7 +100,7 @@ function captura() {
         const empleado = new Empleado(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo);
         // const ui = new UI();
         // ui.addEmpleado(empleado);
-        console.log(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo)
+        //console.log(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo)
         console.log(empleado)
     
 };
