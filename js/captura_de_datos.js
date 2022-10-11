@@ -1,3 +1,18 @@
+class Empleado {
+    constructor(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo) {
+        this.id = id;
+        this.cui = cui;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.fecha = fecha;
+        this.direccion = direccion;
+        this.sexo = sexo;
+        this.telefono = telefono;
+        this.iggs = iggs;
+        this.cargo = cargo; 
+    }
+}
+
 function captura() {
     var id = document.getElementById("id").value;
     var cui = document.getElementById("cui").value;
@@ -60,6 +75,8 @@ function captura() {
         alert("Seleccione un cargo");
         document.getElementById("cargo").focus();
     }
+
+    console.log(new Product());
 
     console.log(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo)
 }
