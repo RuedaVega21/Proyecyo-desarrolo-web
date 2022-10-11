@@ -2,6 +2,7 @@ class Empleado {
     constructor(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo) {
         this.id = id;
         this.cui = cui;
+        this.nit = nit;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.fecha = fecha;
@@ -13,70 +14,38 @@ class Empleado {
     }
 }
 
-function captura() {
-    var id = document.getElementById("id").value;
-    var cui = document.getElementById("cui").value;
-    var nit = document.getElementById("nit").value;
-    var nombres = document.getElementById("nombres").value;
-    var apellidos = document.getElementById("apellidos").value;
-    var fecha = document.getElementById("fecha").value;
-    var direccion = document.getElementById("direccion").value;
-    var sexo = document.getElementById("estadoSexo").value;
-    var telefono = document.getElementById("telefono").value;
-    var iggs = document.getElementById("iggs").value;
-    var cargo = document.getElementById("estadoCargo").value;
-
-    if (id == '') {
-        alert("El campo id no puede quedarse vacio");
-        document.getElementById("id").focus();
-    } else {
-    if (cui == '') {
-        alert("Ingresar su cui");
-        document.getElementById("cui").focus();
-        }
+class UI{
+    addEmpleado(Empleado) {
+        const listaempleado = document.getElementById('empleado-list');
+        const elemento = document.createElement('div');
+        elemento.innerHTML = `
+            < div class="card text-center mb-4" >
+                <div class="card-body">
+                    <strong>Id Empleado</strong>: ${Empleado.id}
+                </div>
+            </div > 
+        `;
+        listaempleado.appendChild(elemento);
     }
-    if (nit == '') {
-        alert("Ingresar su nit");
-        document.getElementById("nit").focus();
-    } else {
-    if (nombres == '') {
-        alert("Ingresar los nombres");
-        document.getElementById("nombres").focus();
-        }
-    }
-    if (apellidos == '') {
-        alert("Ingresar los apellidos");
-        document.getElementById("apellidos").focus();
-    } else {
-    if (fecha == '') {
-        alert("Ingresar fecha de nacimiento");
-        document.getElementById("fecha").focus();
-        }
-    }
-    if (direccion == '') {
-        alert("Ingresar su dirección");
-        document.getElementById("direccion").focus();
-    } else {
-    if (sexo == '') {
-        alert("Seleccione sexo");
-        document.getElementById("sexo").focus();
-        }
-    }
-    if (telefono == '') {
-        alert("Ingresar su numero");
-        document.getElementById("telefono").focus();
-    } else {
-    if (iggs == '') {
-        alert("Agrege su carnet de iggs");
-        document.getElementById("iggs").focus();
-        }
-    }
-    if (cargo == '') {
-        alert("Seleccione un cargo");
-        document.getElementById("cargo").focus();
-    }
-
-    console.log(new Product());
-
-    console.log(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo)
 }
+
+document.getElementById('product-form')
+    .addEventListener('submit', function (e) {
+        const id = document.getElementById("id").value;
+        const cui = document.getElementById("cui").value;
+        const nit = document.getElementById("nit").value;
+        const nombres = document.getElementById("nombres").value;
+        const apellidos = document.getElementById("apellidos").value;
+        const fecha = document.getElementById("fecha").value;
+        const direccion = document.getElementById("direccion").value;
+        const sexo = document.getElementById("estadoSexo").value;
+        const telefono = document.getElementById("telefono").value;
+        const iggs = document.getElementById("iggs").value;
+        const cargo = document.getElementById("estadoCargo").value;
+
+        const empleado = new Empleado(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo);
+        const ui = new UI();
+        ui.addEmpleado(empleado);
+
+        e.preventDefault();
+    });

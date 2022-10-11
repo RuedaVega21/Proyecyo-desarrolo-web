@@ -142,6 +142,17 @@ textarea {
     background-color: lightcyan;
 }
 
+.submit input[type="submit"] {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: .50rem 1.5rem;
+    cursor: pointer;
+    
+    border: 2px solid #000000;
+    border-radius: 70px;
+    background-color: lightcyan;
+}
+
 
 .parte2__container {
     max-width: 800px;
