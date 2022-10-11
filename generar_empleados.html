@@ -15,35 +15,35 @@
         <form>
             <div class='field'>
                 <label>Id empleado</label>
-                <input name='id' type='number' placeholder='0910' autocomplete />
+                <input name='id' type='number' id="id" placeholder='0910' autocomplete />
             </div>
             <div class='field'>
                 <label>Cui</label>
-                <input name='cui' type='number' placeholder='3060181010302' autocomplete />
+                <input name='cui' type='number' id="cui" placeholder='3060181010302' autocomplete />
             </div>
             <div class='field'>
                 <label>Nit</label>
-                <input name='nit' type='number' placeholder='101577923' autocomplete />
+                <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
             </div>
             <div class='field'>
                 <label>Nombres del trabajador</label>
-                <input name='nombres' type='name' placeholder='Nombres' autocomplete />
+                <input name='nombres' type='name' id="nombres" placeholder='Nombres' autocomplete />
             </div>
             <div class='field'>
                 <label>Apellidos del trabajador</label>
-                <input name='apellidos' type='name' placeholder='Apellidos' autocomplete />
+                <input name='apellidos' type='name' id="apellidos" placeholder='Apellidos' autocomplete />
             </div>
             <div class='field'>
                 <label>Fecha de nacimiento</label>
-                <input name='fecha' type='number' placeholder='27/12/1999' autocomplete />
+                <input name='fecha' type='number' id="fecha" placeholder='27/12/1999' autocomplete />
             </div>
             <div class='field'>
                 <label>Dirección</label>
-                <input name='direccion' type='name' placeholder='Guatemala Zona 1' autocomplete />
+                <input name='direccion' type='name' id="direccion" placeholder='Guatemala Zona 1' autocomplete />
             </div>
             <div class="field">
                 <label>Sexo</label>
-                <select name='estadoSexo' required>
+                <select name='estadoSexo' id="estadoSexo" required>
                     <option selected disabled>Sel. una opción</option>
                     <option>Masculino</option>
                     <option>Femenino</option>
@@ -51,16 +51,16 @@
             </div>
             <div class='field'>
                 <label>Teléfono</label>
-                <input name='telefono' type='number' placeholder='0000-0000' autocomplete />
+                <input name='telefono' type='number' id="telefono" placeholder='0000-0000' autocomplete />
             </div>
             
             <div class='field'>
                 <label>Carné Iggs</label>
-                <input name='iggs' type='number' placeholder='Número de afilacion' autocomplete />
+                <input name='iggs' type='number' id="iggs" placeholder='Número de afilacion' autocomplete />
             </div>
             <div class='field'>
                 <label>Cargo</label>
-                <select name='estadoCargo' required>
+                <select name='estadoCargo' id="estadoCargo" required>
                     <option selected disabled>Sel. una opción</option>
                     <option>Front-End</option>
                     <option>Back-End</option>
@@ -72,8 +72,8 @@
             </div>
 
             <div class='submit'>
-                <button>
-                    CREAR
+                <button type="button" onclick="captura()"> 
+                    CREAR 
                 </button>
             </div>
         </form>
@@ -81,6 +81,8 @@
     <section class="parte2__container container">
         <a href="pagina2.html" class="funcion_1">Volver</a>
     </section>
+
+    <script src="js/captura_de_datos.js"></script>
 </body>
 
 </html>
