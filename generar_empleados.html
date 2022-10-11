@@ -12,7 +12,7 @@
 <body>
     <main>
         <h1>Generación de empleados</h1>
-        <form>
+        <form id="product-form">
             <div class='field'>
                 <label>Id empleado</label>
                 <input name='id' type='number' id="id" placeholder='0910' autocomplete />
@@ -72,7 +72,7 @@
             </div>
 
             <div class='submit'>
-                <input type="submit" value="Crear" >
+                <input type="submit" value="Crear" onclick="error()" >
             </div>
         </form>
     </main>

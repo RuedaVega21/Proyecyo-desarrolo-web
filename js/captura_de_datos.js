@@ -15,22 +15,29 @@ class Empleado {
 }
 
 class UI{
-    addEmpleado(Empleado) {
+    addEmpleado(empleado) {
         const listaempleado = document.getElementById('empleado-list');
         const elemento = document.createElement('div');
         elemento.innerHTML = `
-            < div class="card text-center mb-4" >
+            <div class="card text-center mb-4">
                 <div class="card-body">
-                    <strong>Id Empleado</strong>: ${Empleado.id}
+                    <strong>Product</strong>: ${empleado.id} -
+                    <strong>Price</strong>: ${empleado.cui} - 
+                    <strong>Year</strong>: ${empleado.nit}
+                    <a href="#" class="btn btn-danger" name="delete">Delete</a>
                 </div>
-            </div > 
+            </div>
         `;
-        listaempleado.appendChild(elemento);
-    }
+    listaempleado.appendChild(elemento);
+  }
 }
+
+
 
 document.getElementById('product-form')
     .addEventListener('submit', function (e) {
+        e.preventDefault();
+
         const id = document.getElementById("id").value;
         const cui = document.getElementById("cui").value;
         const nit = document.getElementById("nit").value;
@@ -47,5 +54,5 @@ document.getElementById('product-form')
         const ui = new UI();
         ui.addEmpleado(empleado);
 
-        e.preventDefault();
+        
     });
