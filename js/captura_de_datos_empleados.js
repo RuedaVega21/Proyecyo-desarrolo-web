@@ -111,36 +111,28 @@ function captura() {
     localStorage.setItem("Iggs", iggs);
     localStorage.setItem("Cargo", cargo);
 
-    document.getElementById("id").value = "";
-    document.getElementById("cui").value = "";
-    document.getElementById("nit").value = "";
-    document.getElementById("nombres").value = "";
-    document.getElementById("apellidos").value = "";
-    document.getElementById("fecha").value = "";
-    document.getElementById("direccion").value = "";
-    document.getElementById("sexo").value = "";
-    document.getElementById("telefono").value = "";
-    document.getElementById("iggs").value = "";
-    document.getElementById("cargo").value = "";
-
         // const ui = new UI();
         // ui.addEmpleado(empleado);
         //console.log(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo)
     console.log(empleado)
 };
 
-function eliminar() {
-    localStorage.setItem("Id", id);
-    localStorage.setItem("Cui", cui);
-    localStorage.setItem("Nit", nit);
-    localStorage.setItem("Nombres", nombres);
-    localStorage.setItem("Apellidos", apellidos);
-    localStorage.setItem("Fechas", fecha);
-    localStorage.setItem("Direccion", direccion);
-    localStorage.setItem("Sexo", sexo);
-    localStorage.setItem("Telefono", telefono);
-    localStorage.setItem("Iggs", iggs);
-    localStorage.setItem("Cargo", cargo);
+function mostrar() {
+    var cui1 = localStorage.getItem("Cui");
 
-    
-}
+    document.getElementById("cui").innerHTML = cui1;
+};
+
+function eliminar() {
+    localStorage.removeItem("id");
+    localStorage.removeItem("cui");
+    localStorage.removeItem("nit");
+    localStorage.removeItem("nombres");
+    localStorage.removeItem("apellidos");
+    localStorage.removeItem("fecha");
+    localStorage.removeItem("direccion")
+    localStorage.removeItem("sexo");
+    localStorage.removeItem("telefono");
+    localStorage.removeItem("iggs");
+    localStorage.removeItem("cargo");
+};
