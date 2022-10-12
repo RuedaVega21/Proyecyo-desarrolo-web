@@ -97,10 +97,50 @@ function captura() {
         document.getElementById("cargo").focus();
     }
 
-        const empleado = new Empleado(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo);
+    const empleado = new Empleado(id, cui, nit, nombres, apellidos, fecha,
+        direccion, sexo, telefono, iggs, cargo);
+    localStorage.setItem("Id", id);
+    localStorage.setItem("Cui", cui);
+    localStorage.setItem("Nit", nit);
+    localStorage.setItem("Nombres", nombres);
+    localStorage.setItem("Apellidos", apellidos);
+    localStorage.setItem("Fechas", fecha);
+    localStorage.setItem("Direccion", direccion);
+    localStorage.setItem("Sexo", sexo);
+    localStorage.setItem("Telefono", telefono);
+    localStorage.setItem("Iggs", iggs);
+    localStorage.setItem("Cargo", cargo);
+
+    document.getElementById("id").value = "";
+    document.getElementById("cui").value = "";
+    document.getElementById("nit").value = "";
+    document.getElementById("nombres").value = "";
+    document.getElementById("apellidos").value = "";
+    document.getElementById("fecha").value = "";
+    document.getElementById("direccion").value = "";
+    document.getElementById("sexo").value = "";
+    document.getElementById("telefono").value = "";
+    document.getElementById("iggs").value = "";
+    document.getElementById("cargo").value = "";
+
         // const ui = new UI();
         // ui.addEmpleado(empleado);
         //console.log(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo)
-        console.log(empleado)
-    
+    console.log(empleado)
 };
+
+function eliminar() {
+    localStorage.setItem("Id", id);
+    localStorage.setItem("Cui", cui);
+    localStorage.setItem("Nit", nit);
+    localStorage.setItem("Nombres", nombres);
+    localStorage.setItem("Apellidos", apellidos);
+    localStorage.setItem("Fechas", fecha);
+    localStorage.setItem("Direccion", direccion);
+    localStorage.setItem("Sexo", sexo);
+    localStorage.setItem("Telefono", telefono);
+    localStorage.setItem("Iggs", iggs);
+    localStorage.setItem("Cargo", cargo);
+
+    
+}
