@@ -14,38 +14,20 @@ class Empleado {
     }
 }
 
-// class UI {
-//     addEmpleado(empleado) {
-//         const listaempleado = document.getElementById('empleado-list');
-//         const elemento = document.createElement('div');
-//         elemento.innerHTML = `
-//             <div class="card text-center mb-4">
-//                 <div class="card-body">
-//                     <strong>Product</strong>: ${empleado.id} -
-//                     <strong>Price</strong>: ${empleado.cui} - 
-//                     <strong>Year</strong>: ${empleado.nit}
-//                     <a href="#" class="btn btn-danger" name="delete">Delete</a>
-//                 </div>
-//             </div>
-//         `;
-//     listaempleado.appendChild(elemento);
-//   }
-// }
-
 
 function captura() {
 
-        const id = document.getElementById("id").value;
-        const cui = document.getElementById("cui").value;
-        const nit = document.getElementById("nit").value;
-        const nombres = document.getElementById("nombres").value;
-        const apellidos = document.getElementById("apellidos").value;
-        const fecha = document.getElementById("fecha").value;
-        const direccion = document.getElementById("direccion").value;
-        const sexo = document.getElementById("estadoSexo").value;
-        const telefono = document.getElementById("telefono").value;
-        const iggs = document.getElementById("iggs").value;
-        const cargo = document.getElementById("estadoCargo").value;
+        var id = document.getElementById("id").value;
+        var cui = document.getElementById("cui").value;
+        var nit = document.getElementById("nit").value;
+        var nombres = document.getElementById("nombres").value;
+        var apellidos = document.getElementById("apellidos").value;
+        var fecha = document.getElementById("fecha").value;
+        var direccion = document.getElementById("direccion").value;
+        var sexo = document.getElementById("estadoSexo").value;
+        var telefono = document.getElementById("telefono").value;
+        var iggs = document.getElementById("iggs").value;
+        var cargo = document.getElementById("estadoCargo").value;
     
     if (id == '') {
         alert("El campo id no puede quedarse vacio");
@@ -97,7 +79,7 @@ function captura() {
         document.getElementById("cargo").focus();
     }
 
-    const empleado = new Empleado(id, cui, nit, nombres, apellidos, fecha,
+    var empleado = new Empleado(id, cui, nit, nombres, apellidos, fecha,
         direccion, sexo, telefono, iggs, cargo);
     localStorage.setItem("Id", id);
     localStorage.setItem("Cui", cui);
@@ -110,18 +92,32 @@ function captura() {
     localStorage.setItem("Telefono", telefono);
     localStorage.setItem("Iggs", iggs);
     localStorage.setItem("Cargo", cargo);
-
-        // const ui = new UI();
-        // ui.addEmpleado(empleado);
-        //console.log(id, cui, nit, nombres, apellidos, fecha, direccion, sexo, telefono, iggs, cargo)
     console.log(empleado)
 };
 
 function mostrar() {
-    var cui1 = localStorage.getItem("Cui");
+    var ID = localStorage.getItem("Id");
+    var CUI = localStorage.getItem("Cui");
+    var NIT = localStorage.getItem("Nit");
+    var NOMBRES = localStorage.getItem("Nombres");
+    var APELLIDOS = localStorage.getItem("Apellidos");
+    var FECHA = localStorage.getItem("Fecha");
+    var SEXO = localStorage.getItem("Sexo");
+    var TELEFONO = localStorage.getItem("Telefono");
+    var IGGS = localStorage.getItem("Iggs");
+    var CARGO = localStorage.getItem("Cargo");
 
-    document.getElementById("cui").innerHTML = cui1;
-};
+    document.getElementById("ID").innerHTML = ID;
+    document.getElementById("CUI").innerHTML = CUI;
+    document.getElementById("NIT").innerHTML = NIT;
+    document.getElementById("NOMBREs").innerHTML = NOMBRES;
+    document.getElementById("APELLIDOS").innerHTML = APELLIDOS;
+    document.getElementById("FECHA").innerHTML = FECHA;
+    document.getElementById("SEXO").innerHTML = SEXO;
+    document.getElementById("TELEFONO").innerHTML = TELEFONO;
+    document.getElementById("IGGS").innerHTML = IGGS;
+    document.getElementById("CARGO").innerHTML = CARGO;
+}
 
 function eliminar() {
     localStorage.removeItem("id");
