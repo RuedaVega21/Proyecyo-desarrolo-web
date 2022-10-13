@@ -16,16 +16,16 @@ class Planilla {
 
 function captura() {
 
-        const id = document.getElementById("id").value;
-        const nombre = document.getElementById("nombre").value;
-        const sueldo = document.getElementById("sueldo").value;
-        const estadoCargo = document.getElementById("estadoCargo").value;
-        const horas = document.getElementById("horas").value;
-        const horas_totales = document.getElementById("horas_totales").value;
-        const horas_extras = document.getElementById("horas_extras").value;
-        const estadoLaboral = document.getElementById("estadoLaboral").value;
-        const estadoJornada = document.getElementById("estadoJornada").value;
-        const estadoDescuento = document.getElementById("estadoDescuento").value;
+        var id = document.getElementById("id").value;
+        var nombre = document.getElementById("nombre").value;
+        var sueldo = document.getElementById("sueldo").value;
+        var estadoCargo = document.getElementById("estadoCargo").value;
+        var horas = document.getElementById("horas").value;
+        var horas_totales = document.getElementById("horas_totales").value;
+        var horas_extras = document.getElementById("horas_extras").value;
+        var estadoLaboral = document.getElementById("estadoLaboral").value;
+        var estadoJornada = document.getElementById("estadoJornada").value;
+        var estadoDescuento = document.getElementById("estadoDescuento").value;
     
     if (id == '') {
         alert("El campo id no puede quedarse vacio");
@@ -68,8 +68,19 @@ function captura() {
             document.getElementById("estadoDescuento").focus();
     }
 
-        const planilla = new Planilla(id, nombre, sueldo, estadoCargo,
-        horas, horas_totales, horas_extras, estadoLaboral, estadoJornada, estadoDescuento);
+        var planilla = new Planilla(id, nombre, sueldo, estadoCargo,
+            horas, horas_totales, horas_extras, estadoLaboral, estadoJornada, estadoDescuento);
+    
+    localStorage.setItem("Id", id);
+    localStorage.setItem("Nombre", nombre);
+    localStorage.setItem("Sueldo", sueldo);
+    localStorage.setItem("EstadoCargo", estadoCargo);
+    localStorage.setItem("Horas", horas);
+    localStorage.setItem("Horas_totales", horas_totales);
+    localStorage.setItem("Horas_extras", horas_extras);
+    localStorage.setItem("EstadoLaboral", estadoLaboral);
+    localStorage.setItem("EstadoJornada", estadoJornada);
+    localStorage.setItem("EstadoDescuento", estadoDescuento);
         
         //console.log(id, nombre, sueldo, estadoCargo, horas, horas_totales, horas_extras, estadoLaboral, estadoJornada, estadoDescuento)
         console.log(planilla)

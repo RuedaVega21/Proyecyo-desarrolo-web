@@ -79,8 +79,9 @@ function captura() {
         document.getElementById("cargo").focus();
     }
 
-    var empleado = new Empleado(id, cui, nit, nombres, apellidos, fecha,
-        direccion, sexo, telefono, iggs, cargo);
+        var empleado = new Empleado(id, cui, nit, nombres, apellidos, fecha,
+            direccion, sexo, telefono, iggs, cargo);
+    
     localStorage.setItem("Id", id);
     localStorage.setItem("Cui", cui);
     localStorage.setItem("Nit", nit);
