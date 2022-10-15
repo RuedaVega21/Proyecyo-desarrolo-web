@@ -45,7 +45,7 @@ type_response = "application/json"
 #                        #
 ##########################
 
-from controller.password import pass_data
+from model.user import pass_data
 app.register_blueprint(pass_data, url_prefix=rooturl)
 
 @app.errorhandler(BadRequest)
