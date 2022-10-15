@@ -11,7 +11,7 @@ serverConfig = get_environment("Server")
 user_data = Blueprint("user_data", __name__)
 
 mongo = PyMongo(app)
-db = mongo.db.usuarios
+db = mongo.db.puesto
 # Rest API to validate a user
 @user_data.route("/login", methods=["POST"])
 def get_user_by_password():

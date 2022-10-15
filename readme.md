@@ -8,7 +8,7 @@
 
 ## Comando para construir el backend
 * docker stop planilla_back; docker rm planilla_back; docker image rm planilla_back; docker build . -t planilla_back; docker run -d -p 44490:443/tcp --restart=always --name planilla_back planilla_back
-* El backend se consulta en http://localhost:44490/api/servicio
+* El backend se consulta en http://localhost:55236/api/servicio
 
 ## Comandos para entorno virtual
 * py -m venv venv
