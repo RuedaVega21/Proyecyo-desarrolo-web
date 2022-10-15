@@ -86,3 +86,27 @@ function captura() {
         console.log(planilla)
     
 };
+
+function mostrar() {
+    var ID = localStorage.getItem("Id");
+    var NOMBRE = localStorage.getItem("Nombre");
+    var SUELDO = localStorage.getItem("Nit");
+    var ESTADOCARGO = localStorage.getItem("Nombres");
+    var HORAS = localStorage.getItem("Apellidos");
+    var HORAS_TOTALES = localStorage.getItem("Fecha");
+    var HORAS_EXTRAS = localStorage.getItem("Sexo");
+    var ESTADOLABORAL = localStorage.getItem("Telefono");
+    var ESTADOJORNADA = localStorage.getItem("Iggs");
+    var ESTADODESCUENTO = localStorage.getItem("Cargo");
+
+    document.getElementById("ID").innerHTML = ID;
+    document.getElementById("NOMBRE").innerHTML = NOMBRE;
+    document.getElementById("SUELDO").innerHTML = SUELDO;
+    document.getElementById("ESTADOCARGO").innerHTML = ESTADOCARGO;
+    document.getElementById("HORAS").innerHTML = HORAS;
+    document.getElementById("HORAS_TOTALES").innerHTML = HORAS_TOTALES;
+    document.getElementById("HORAS_EXTRAS").innerHTML = HORAS_EXTRAS;
+    document.getElementById("ESTADOLABORAL").innerHTML = ESTADOLABORAL;
+    document.getElementById("ESTADOJORNADA").innerHTML = ESTADOJORNADA;
+    document.getElementById("ESTADODESCUENTO").innerHTML = ESTADODESCUENTO;
+}

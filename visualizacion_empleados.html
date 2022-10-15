@@ -1,47 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ES">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<center>
-    <h1>Ejemplo - localStorage</h1>
+    <meta charset="utf-8">
+    <title>Visualizar empleados</title>
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="shortcut icon" href="./Imagenes/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/estilo_planilla.css">
+</head>
 
+<body>
+    <main>
+        <h1>Visualizar empleados</h1>
+        <form>
+                <div class='field'> Id almacenado:
+                <label type="text" id="ID"></label><br> </div>
+                <div class='field'> Cui almacenado:
+                <label type="text" id="CUI"></label><br> </div>
+                <div class='field'> Nit almacenado:
+                <label type="text" id="NIT"></label><br> </div>
+                <div class='field'> Nombres almacenado:
+                <label type="text" id="NOMBRES"></label><br> </div>
+                <div class='field'> Apellidos almacenado:
+                <label type="text" id="APELLIDOS"></label><br> </div>
+                <div class='field'> Fecha almacenado:
+                <label type="date" id="FECHA"></label><br> </div>
+                <div class='field'> Sexo almacenado:
+                <label type="text" id="SEXO"></label><br> </div>
+                <div class='field'> Telefono almacenado:
+                <label type="text" id="TELEFONO"></label><br> </div>
+                <div class='field'> Iggs almacenado:
+                <label type="text" id="IGGS"></label><br> </div>
+                <div class='field'> Cargo almacenado:
+                <label type="text" id="CARGO"></label><br> </div>
+            </div>
 
-    <hr />
-    Id almacenado:
-    <label type="text" id="ID"></label><br>
-    Cui almacenado:
-    <label type="text" id="CUI"></label><br>
-    Nit almacenado:
-    <label type="text" id="NIT"></label><br>
-    Nombres almacenado:
-    <label type="text" id="NOMBRES"></label><br>
-    Apellidos almacenado:
-    <label type="text" id="APELLIDOS"></label><br>
-    Fecha almacenado:
-    <label type="date" id="FECHA"></label><br>
-    Sexo almacenado:
-    <label type="text" id="SEXO"></label><br>
-    Telefono almacenado:
-    <label type="text" id="TELEFONO"></label><br>
-    Iggs almacenado:
-    <label "text" id="IGGS"></label><br>
-    Cargo almacenado:
-    <label "text" id="CARGO"></label><br>
+        <div class='submit'>
+            <button type="button" onclick="mostrar()">
+                GENERAR
+            </button>
+        </div>
+        </form>
+    </main>
+    <section class="parte2__container container">
+        <a href="pagina2.html" class="funcion_1">Volver</a>
+    </section>
     
-
-    <div class='submit'>
-        <button type="button" onclick="mostrar()">
-            GENERAR
-        </button>
-    </div>
-</center>
-
-<hr />
-<script src="js/captura_de_datos_empleados.js"></script>
+    <script src="js/captura_de_datos_empleados.js"></script>
 </body>
-
 </html>
-
