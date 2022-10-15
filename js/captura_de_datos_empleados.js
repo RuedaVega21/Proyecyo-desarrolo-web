@@ -86,7 +86,7 @@ function captura() {
     localStorage.setItem("Nit", nit);
     localStorage.setItem("Nombres", nombres);
     localStorage.setItem("Apellidos", apellidos);
-    localStorage.setItem("Fechas", fecha);
+    localStorage.setItem("Fecha", fecha);
     localStorage.setItem("Direccion", direccion);
     localStorage.setItem("Sexo", sexo);
     localStorage.setItem("Telefono", telefono);
