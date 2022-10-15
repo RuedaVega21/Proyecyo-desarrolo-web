@@ -9,7 +9,7 @@ from utils.environment import load_environment, get_environment
 #
 #   Create app and load ENV
 #
-load_environment("ssl/config-back-json")
+load_environment("ssl/config-db-json")
 serverConfig = get_environment("Server")
 dictConfig({
     'version': 1,
