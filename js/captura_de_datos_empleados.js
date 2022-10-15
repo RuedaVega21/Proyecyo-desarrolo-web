@@ -14,7 +14,6 @@ class Empleado {
     }
 }
 
-
 function captura() {
 
         var id = document.getElementById("id").value;
@@ -111,7 +110,7 @@ function mostrar() {
     document.getElementById("ID").innerHTML = ID;
     document.getElementById("CUI").innerHTML = CUI;
     document.getElementById("NIT").innerHTML = NIT;
-    document.getElementById("NOMBREs").innerHTML = NOMBRES;
+    document.getElementById("NOMBRES").innerHTML = NOMBRES;
     document.getElementById("APELLIDOS").innerHTML = APELLIDOS;
     document.getElementById("FECHA").innerHTML = FECHA;
     document.getElementById("SEXO").innerHTML = SEXO;
@@ -121,15 +120,15 @@ function mostrar() {
 }
 
 function eliminar() {
-    localStorage.removeItem("id");
-    localStorage.removeItem("cui");
-    localStorage.removeItem("nit");
-    localStorage.removeItem("nombres");
-    localStorage.removeItem("apellidos");
-    localStorage.removeItem("fecha");
-    localStorage.removeItem("direccion")
-    localStorage.removeItem("sexo");
-    localStorage.removeItem("telefono");
-    localStorage.removeItem("iggs");
-    localStorage.removeItem("cargo");
+    localStorage.removeItem("Id");
+    localStorage.removeItem("Cui");
+    localStorage.removeItem("Nit");
+    localStorage.removeItem("Nombres");
+    localStorage.removeItem("Apellidos");
+    localStorage.removeItem("Fecha");
+    localStorage.removeItem("Direccion")
+    localStorage.removeItem("Sexo");
+    localStorage.removeItem("Telefono");
+    localStorage.removeItem("Iggs");
+    localStorage.removeItem("Cargo");
 };
