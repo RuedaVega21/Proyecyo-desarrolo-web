@@ -90,14 +90,14 @@ function captura() {
 function mostrar() {
     var ID = localStorage.getItem("Id");
     var NOMBRE = localStorage.getItem("Nombre");
-    var SUELDO = localStorage.getItem("Nit");
-    var ESTADOCARGO = localStorage.getItem("Nombres");
-    var HORAS = localStorage.getItem("Apellidos");
-    var HORAS_TOTALES = localStorage.getItem("Fecha");
-    var HORAS_EXTRAS = localStorage.getItem("Sexo");
-    var ESTADOLABORAL = localStorage.getItem("Telefono");
-    var ESTADOJORNADA = localStorage.getItem("Iggs");
-    var ESTADODESCUENTO = localStorage.getItem("Cargo");
+    var SUELDO = localStorage.getItem("Sueldo");
+    var ESTADOCARGO = localStorage.getItem("EstadoCargo");
+    var HORAS = localStorage.getItem("Horas");
+    var HORAS_TOTALES = localStorage.getItem("Horas_totales");
+    var HORAS_EXTRAS = localStorage.getItem("Horas_extras");
+    var ESTADOLABORAL = localStorage.getItem("EstadoLaboral");
+    var ESTADOJORNADA = localStorage.getItem("EstadoJornada");
+    var ESTADODESCUENTO = localStorage.getItem("EstadoDescuento");
 
     document.getElementById("ID").innerHTML = ID;
     document.getElementById("NOMBRE").innerHTML = NOMBRE;
