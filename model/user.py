@@ -1,5 +1,4 @@
 from main import app
-from flask_pymongo import PyMongo
 from bson import json_util
 from flask import Blueprint, session, abort, request, jsonify
 from flask import current_app
@@ -11,30 +10,34 @@ serverConfig = get_environment("Server")
 user_data = Blueprint("user_data", __name__)
 
 mongo = PyMongo(app)
-db = mongo.db.puesto
+db = mongo.db.user
+
 # Rest API to validate a user
 @user_data.route("/login", methods=["POST"])
 def get_user_by_password():
     try:
         logger = current_app.logger
         logger.info("url=/api/login")
-        # Obtaining the data of an application
-        rules = {"user": "required", "password": "required"}
 
-        data = request.json
+        user = request.form['user']
+        password = request.form['password']
 
-        if validate(data, rules):
-            # Getting results from the request
-            mongo_data, code = get_user_data(data)
-            return jsonify(mongo_data), code
+        logger.info(user)
+        logger.info(password)
+
+        user_data = get_user_data(user)
+        # json_user_data = jsonify(user_data)
+
+        if user_data['password'] == password:
+            return "", 200
         else:
             abort(400)
-
     except Exception as e:
         logger.info(f"Response={e}")
         abort(http_error_dict[type(e).__name__])
 
 def get_user_data(username):
     user = db.find()
-    response = json_util.dumps(user)
-    return response, 200
+    
+    a_user = user[0]
+    return a_user

@@ -39,14 +39,20 @@ logger.info(f"SESSION: {app.config['SESSION_COOKIE_NAME']}")
 
 type_response = "application/json"
 
-##########################
-#                        #
-# Add Custom Controllers #
-#                        #
-##########################
+################################
+#                              #
+# Begin Register Controllers   #
+#                              #
+################################
 
-from model.user import pass_data
-app.register_blueprint(pass_data, url_prefix=rooturl)
+from model.user import user_data
+app.register_blueprint(user_data, url_prefix=rooturl)
+
+##############################
+#                            #
+# End Register Controllers   #
+#                            #
+##############################
 
 @app.errorhandler(BadRequest)
 def handle_bad_request(e):
