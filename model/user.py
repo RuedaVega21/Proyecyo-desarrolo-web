@@ -5,12 +5,13 @@ from flask import current_app
 from utils.config import http_error_dict
 from validator import validate
 from utils.environment import get_environment
-
-serverConfig = get_environment("Server")
-user_data = Blueprint("user_data", __name__)
+from flask_pymongo import PyMongo
 
 mongo = PyMongo(app)
 db = mongo.db.user
+
+serverConfig = get_environment("Server")
+user_data = Blueprint("user_data", __name__)
 
 # Rest API to validate a user
 @user_data.route("/login", methods=["POST"])
@@ -24,7 +25,7 @@ def get_user_by_password():
 
         logger.info(user)
         logger.info(password)
-
+        
         user_data = get_user_data(user)
         # json_user_data = jsonify(user_data)
 
