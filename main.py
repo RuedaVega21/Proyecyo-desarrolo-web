@@ -48,7 +48,6 @@ type_response = "application/json"
 from model.user import user_data
 app.register_blueprint(user_data, url_prefix=rooturl)
 
-
 ##############################
 #                            #
 # End Register Controllers   #
