@@ -46,6 +46,17 @@ type_response = "application/json"
 ##########################
 
 from controller.password import pass_data
+from controller.bonus import bonus_data
+from controller.discount import discount_data
+from controller.employee import employee_data
+from controller.position import position_data
+from controller.relative import relative_data
+app.register_blueprint(pass_data, url_prefix=rooturl)
+app.register_blueprint(bonus_data, url_prefix=rooturl)
+app.register_blueprint(discount_data, url_prefix=rooturl)
+app.register_blueprint(employee_data, url_prefix=rooturl)
+app.register_blueprint(position_data, url_prefix=rooturl)
+app.register_blueprint(relative_data, url_prefix=rooturl)
 app.register_blueprint(pass_data, url_prefix=rooturl)
 
 @app.errorhandler(BadRequest)
