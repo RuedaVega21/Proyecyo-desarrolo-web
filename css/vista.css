@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../Imagenes/Fondo-pagina.jpg');
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 100vh;
+}
+
+div{
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        width: 100%;
+        max-width: 800px;
+        margin-top: 2.8rem;
+        margin-right: auto;
+        margin-left: auto;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+form {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 800px;
+    margin-top: 2.8rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.submit {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin-top: 1.75rem;
+}
+
+.submit button {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: .50rem 1.5rem;
+    cursor: pointer;
+
+    border: 2px solid #000000;
+    border-radius: 70px;
+    background-color: lightcyan;
+}
+
+table {
+    background-color: #000000;
+    border: 1px solid #ddd;
+    color: #fff;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+thead {
+    background: rgba(243, 140, 210, 0.4);
+}
+
+th {
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+.parte2__container {
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.funcion_1 {
+    display: inline-block;
+    background-color: #000000;
+    justify-self: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 35px;
+}
