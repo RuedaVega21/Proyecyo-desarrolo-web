@@ -16,17 +16,18 @@ class Empleado {
 
 function captura() {
 
-        var id = document.getElementById("id").value;
-        var cui = document.getElementById("cui").value;
-        var nit = document.getElementById("nit").value;
-        var nombres = document.getElementById("nombres").value;
-        var apellidos = document.getElementById("apellidos").value;
-        var fecha = document.getElementById("fecha").value;
-        var direccion = document.getElementById("direccion").value;
-        var sexo = document.getElementById("estadoSexo").value;
-        var telefono = document.getElementById("telefono").value;
-        var iggs = document.getElementById("iggs").value;
-        var cargo = document.getElementById("estadoCargo").value;
+        const id = document.getElementById("id").value;
+        const cui = document.getElementById("cui").value;
+        const nit = document.getElementById("nit").value;
+        const nombres = document.getElementById("nombres").value;
+        const apellidos = document.getElementById("apellidos").value;
+        const fecha = document.getElementById("fecha").value;
+        const direccion = document.getElementById("direccion").value;
+        const sexo = document.getElementById("estadoSexo").value;
+        const telefono = document.getElementById("telefono").value;
+        const iggs = document.getElementById("iggs").value;
+        const cargo = document.getElementById("estadoCargo").value;
+
     
     if (id == '') {
         alert("El campo id no puede quedarse vacio");
@@ -93,6 +94,9 @@ function captura() {
     localStorage.setItem("Iggs", iggs);
     localStorage.setItem("Cargo", cargo);
     console.log(empleado)
+
+    var jsonempleado = JSON.stringify(empleado);
+    console.log(jsonempleado)
 };
 
 function mostrar() {
@@ -119,16 +123,3 @@ function mostrar() {
     document.getElementById("CARGO").innerHTML = CARGO;
 }
 
-function eliminar() {
-    localStorage.removeItem("Id");
-    localStorage.removeItem("Cui");
-    localStorage.removeItem("Nit");
-    localStorage.removeItem("Nombres");
-    localStorage.removeItem("Apellidos");
-    localStorage.removeItem("Fecha");
-    localStorage.removeItem("Direccion")
-    localStorage.removeItem("Sexo");
-    localStorage.removeItem("Telefono");
-    localStorage.removeItem("Iggs");
-    localStorage.removeItem("Cargo");
-};
