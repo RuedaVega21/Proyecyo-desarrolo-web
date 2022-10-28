@@ -1,4 +1,4 @@
-// document.querySelector('#btnIngresar').addEventListener('click', inicarSesion());
+document.querySelector('#btnIngresar').addEventListener('click', inicarSesion());
 
 function inicarSesion(){
 var myHeaders = new Headers();
