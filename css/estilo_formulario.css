@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url(../Imagenes/fondo.jpg) no-repeat center top;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../Imagenes/fondo.jpg');
     background-size: cover;
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 100vh;
