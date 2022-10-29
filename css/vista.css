@@ -8,7 +8,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../Imagenes/Fondo-pagina.jpg');
+    background-image: linear-gradient(180deg, #c5c2c28c 0%, #c5c2c28c 100%), url('../Imagenes/Fondo-pagina.jpg');
     background-size: cover;
     font-family: Georgia, 'Times New Roman', Times, serif;
     height: 100vh;
@@ -58,19 +58,18 @@ form {
 
 .submit button {
     display: inline-block;
-    font-size: 1.1rem;
-    padding: .50rem 1.5rem;
-    cursor: pointer;
-
-    border: 2px solid #000000;
-    border-radius: 70px;
-    background-color: lightcyan;
+    background-color: #000000;
+    justify-self: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 35px;
+    border-radius: 35px;
 }
 
 table {
-    background-color: #000000;
-    border: 1px solid #ddd;
-    color: #fff;
+    background-color: #ffffff;
+    border: 1px solid rgb(5, 5, 5);
+    color: rgb(10, 10, 10);
     font-size: 14px;
     table-layout: fixed;
     border-collapse: collapse;

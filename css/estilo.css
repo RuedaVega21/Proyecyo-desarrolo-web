@@ -40,11 +40,31 @@ body {
     z-index: -1;
 }
 
+ul, ol {
+    list-style: none;
+}
+
 .nav {
     --padding-container: 0;
     height: 100%;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.nav :hover{
+    background-color: #000000;
+}
+
+.nav > li {
+    float: left;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
 }
 
 .nav__link {
@@ -54,6 +74,10 @@ body {
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 2em;
+}
+
+.nav li:hover > ul {
+    display: block;
 }
 
 .nav__links {
@@ -227,3 +251,4 @@ body {
     padding: 10px 35px;
     border-radius: 35px;
 }
+
