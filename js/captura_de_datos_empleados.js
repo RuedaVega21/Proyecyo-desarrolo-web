@@ -1,8 +1,8 @@
 class Empleado {
-    constructor(id, cui, nit, nombres, apellidos, fecha, 
+    constructor(id, dpi, nit, nombres, apellidos, fecha, 
         direccion, sexo, telefono, iggs, estadoCargo, estadoJornada) {
         this.id = id;
-        this.cui = cui;
+        this.dpi = dpi;
         this.nit = nit;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -18,7 +18,7 @@ class Empleado {
 function captura() {
 
         const id = document.getElementById("id").value;
-        const cui = document.getElementById("cui").value;
+        const dpi = document.getElementById("dpi").value;
         const nit = document.getElementById("nit").value;
         const nombres = document.getElementById("nombres").value;
         const apellidos = document.getElementById("apellidos").value;
@@ -34,9 +34,9 @@ function captura() {
         alert("El campo id no puede quedarse vacio");
         document.getElementById("id").focus();
     } else {
-        if (cui == '') {
-            alert("Ingresar su cui");
-            document.getElementById("cui").focus();
+        if (dpi == '') {
+            alert("Ingresar su dpi");
+            document.getElementById("dpi").focus();
         }
     }
     if (nit == '') {
@@ -87,11 +87,11 @@ function captura() {
     
 
 
-        var empleado = new Empleado(id, cui, nit, nombres, apellidos, fecha,
+        var empleado = new Empleado(id, dpi, nit, nombres, apellidos, fecha,
             direccion, sexo, telefono, iggs, estadoCargo,estadoJornada);
     
     localStorage.setItem("Id", id);
-    localStorage.setItem("Cui", cui);
+    localStorage.setItem("Dpi", dpi);
     localStorage.setItem("Nit", nit);
     localStorage.setItem("Nombres", nombres);
     localStorage.setItem("Apellidos", apellidos);
@@ -110,7 +110,7 @@ function captura() {
 
 function mostrar() {
     var ID = localStorage.getItem("Id");
-    var CUI = localStorage.getItem("Cui");
+    var DPI = localStorage.getItem("Dpi");
     var NIT = localStorage.getItem("Nit");
     var NOMBRES = localStorage.getItem("Nombres");
     var APELLIDOS = localStorage.getItem("Apellidos");
@@ -122,7 +122,7 @@ function mostrar() {
     var ESTADOJORNADA = localStorage.getItem("EstadoJornada");
 
     document.getElementById("ID").innerHTML = ID;
-    document.getElementById("CUI").innerHTML = CUI;
+    document.getElementById("DPI").innerHTML = DPI;
     document.getElementById("NIT").innerHTML = NIT;
     document.getElementById("NOMBRES").innerHTML = NOMBRES;
     document.getElementById("APELLIDOS").innerHTML = APELLIDOS;
