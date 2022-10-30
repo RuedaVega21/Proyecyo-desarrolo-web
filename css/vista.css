@@ -63,6 +63,7 @@ form {
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 10px 35px;
+    border-radius: 35px;
 }
 
 table {
@@ -107,4 +108,22 @@ td {
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 10px 35px;
+    border-radius: 35px;
 }
+
+table{
+    border-collapse: collapse;
+}
+table, td, th {
+    border: 2px solid orange;
+    padding:20px;
+}
+button{
+    color:white;
+    font-weight:bold;
+    background-color:orange;
+    width:100px;
+    height:25px;
+    font-size:15px;
+}
+
