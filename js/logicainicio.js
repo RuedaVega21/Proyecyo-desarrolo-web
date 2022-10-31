@@ -6,7 +6,7 @@ myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
     "user": "Sebas_213",
-    "password": "sebas"
+    "password": ""
 });
 
 var requestOptions = {

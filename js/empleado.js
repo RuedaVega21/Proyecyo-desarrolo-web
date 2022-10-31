@@ -1,9 +1,27 @@
-fetch("http://localhost:44490/api/login", requestOptions)
-    .then(response => response(text))
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-    
-    response = JSON.parse(response.text)
-    if (response.status == "Success") {
-        ingresar();
+const { MongoClient } = require("mongodb");
+const connectionString = process.env.ATLAS_URI;
+const client = new MongoClient(connectionString, {
+useNewUrlParser: true,
+useUnifiedTopology: true,
+});
+
+let dbConnection;
+
+module.exports = {
+connectToServer: function (callback) {
+    client.connect(function (err, db) {
+    if (err || !db) {
+        return callback(err);
     }
+
+    dbConnection = db.db("sample_airbnb");
+    console.log("Successfully connected to MongoDB.");
+
+    return callback();
+    });
+},
+
+etDb: function () {
+    return dbConnection;
+},
+};
