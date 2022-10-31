@@ -1,4 +1,3 @@
-var formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
@@ -14,12 +13,12 @@ var raw = JSON.stringify({
     "correo": datos.get('correo')
 });
 
-fetch("http://localhost:44490/api/login", requestOptions)
-    .then(response => response(text))
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+fetch("", {
+    method: 'POST',
+    body: datos
+})
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
     
-    response = JSON.parse(response.text)
-    if (response.status == "Success") {
-        ingresar();
-    }
