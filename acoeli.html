@@ -11,33 +11,52 @@
 
 <body>
     <main>
-        <h1>Actualizar o Eliminar</h1>
+        <h1>Editar o Eliminar</h1>
         <form>
-            <div class='field>
-                <label>Id empleado</label>
-                <input name='id' type='number' placeholder='0910' autocomplete />
-            </div>
-            <div class='textBox'>
-                <label>Por qué se actualiza o por qué se elimina?</label>
-                <textarea></textarea>
+                
+            <div class=''>
+                <label class="">Id del empleado:  </label>
+                <select name="select" id="id" class="">
+                    <option value="id">Seleccione un empleado</option>
+                </select>
             </div>
             <div class='submit'>
-                <button type="button" onclick="mostrar()">
-                    ACTUALIZAR
+                <button type="button" onclick="">
+                    Editar
                 </button>
             </div>
             <div class='submit'>
-                <button type="button" onclick="eliminar()">
-                    ELIMINAR
+                <button type="button" onclick="">
+                    Eliminar
                 </button>
             </div>
+            <section class="parte2__container container">
+                <a href="verempleado.html" class="funcion_1">Volver</a>
+            </section>
+        
         </form>
     </main>
-    <section class="parte2__container container">
-        <a href="pagina2.html" class="funcion_1">Volver</a>
-    </section>
-
-    <script src="js/captura_de_datos_empleados.js"></script>
+    <script type="text/javascript" >
+        let url = '';
+        $(document).ready(function(){
+            recargarLista();
+            $('id').change(function(){
+                recargarLista();
+            });
+        });
+    </script>
+    <script type="text/javascript" >
+            function recargarLista(){
+                $.ajax({
+                    type:"POST",
+                    url:"",
+                    data: "id" +$('id').val(),
+                success:function(r){
+                    $('id').html(r);
+                }
+                })
+            }
+        </script>
 </body>
 
 </html>
