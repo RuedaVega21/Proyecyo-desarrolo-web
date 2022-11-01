@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Generar puesto</title>
+    <title>Generar hora extra</title>
     <link rel="stylesheet" href="./css/master.css">
     <link rel="shortcut icon" href="./Imagenes/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/estilo_planilla.css">
@@ -11,27 +11,27 @@
 
 <body>
     <main>
-        <h1>Generación de puesto</h1>
+        <h1>Generar hora extra</h1>
         <form action="" class="formulario" id="formulario">
             <div class='field'>
-                <label>Precio de hora extra</label>
-                <input name='factor_hora_extra' type='number' id="factor_hora_extra" placeholder='Precio de hora extra' autocomplete />
+                <label>Cantidad de horas</label>
+                <input name='cantidad' type='number' id="cantidad" placeholder='Cuantas horas' autocomplete />
             </div>
             <div class='field'>
-                <label>Horas diarias</label>
-                <input name='horas' type='number' id="horas" placeholder='Horas trabajadas por día' autocomplete />
+                <label>Fecha</label>
+                <input name='fecha' type='date' id="fecha"  autocomplete />
             </div>
             <div class='field'>
-                <label>Nombre del puesto</label>
-                <input name='nombre' type='name' id="nombre" placeholder='Full stack por ejemplo' autocomplete />
+                <label>Id de la planilla</label>
+                <input name='planilla_id' type='number' id="planilla_id"  autocomplete />
             </div>
             <div class='field'>
-                <label>Precio</label>
-                <input name='precio' type='number' id="precio" placeholder='Valor del precio' autocomplete />
+                <label>Id del empleado</label>
+                <input name='empleado_id' type='number' id="empleado_id"  autocomplete />
             </div>
             <div class='field'>
-                <label>Sueldo</label>
-                <input name='sueldo' type='number' id="sueldo" placeholder='El sueldo del puesto' autocomplete />
+                <label>Valor de hora</label>
+                <input name='valor_calculo' type='number' id="valor_calculo" placeholder='Valor' autocomplete />
             </div>
             <div class='submit'>
                 <button type="submit" class="formulario__btn">Enviar</button>
@@ -43,7 +43,7 @@
     </main>
 
 
-    <script src="js/ge_puesto.js"></script>
+    <script src="js/ge_horas.js"></script>
 
 </body>
 

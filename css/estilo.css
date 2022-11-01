@@ -68,6 +68,10 @@ ul, ol {
     min-width: 140px;
 }
 
+.nav li:hover > ul{
+    display: block;
+}
+
 .nav__link {
     margin-left: auto;
     padding: 0;
