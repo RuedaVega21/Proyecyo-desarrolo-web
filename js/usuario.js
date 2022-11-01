@@ -18,6 +18,7 @@ var raw = JSON.stringify({
     "nombre_segundo": datos.get('nombre2'),
     "telefono1": datos.get('telefono1'),
     "telefono2": datos.get('telefono2'),
+    "puesto_id" : datos.get('estadoCargo')
     });
 
     var requestOptions = {
@@ -28,7 +29,7 @@ var raw = JSON.stringify({
     };
     
     fetch("http://127.0.0.1:5000/api/empleado/crear/", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
+    .then(response => response.json())
+    .then(result => console.log(result.data.nombre_primero))
     .catch(error => console.log('error', error));
 });
