@@ -3,22 +3,21 @@ formulario.addEventListener('submit', function(e){
     console.log('funciona')
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-});
+    var datos = new FormData(formulario);
 
 var raw = JSON.stringify({
-    "apellido_primero": Headers.get('apellido1'),
-    "apellido_segundo": Headers.get('apellido2'),
-    "carnet_igss": Headers.get('iggs'),
-    "dpi": Headers.get('dpi'),
-    "estado": Headers.get('estadoEstado'),
-    "fecha_nacimiento": Headers.get('fecha'),
-    "jornada": Headers.get('estadoJornada'),
-    "nit": Headers.get('nit'),
-    "nombre_primero": Headers.get('nombre1'),
-    "nombre_segundo": Headers.get('nombre2'),
-    "puesto_id": Headers.get('id'),
-    "telefono1": Headers.get('telefono1'),
-    "telefono2": Headers.get('telefono2'),
+    "apellido_primero": datos.get('apellido1'),
+    "apellido_segundo": datos.get('apellido2'),
+    "carnet_igss": datos.get('iggs'),
+    "dpi": datos.get('dpi'),
+    "estado": datos.get('estadoEstado'),
+    "fecha_nacimiento": datos.get('fecha'),
+    "jornada": datos.get('estadoJornada'),
+    "nit": datos.get('nit'),
+    "nombre_primero": datos.get('nombre1'),
+    "nombre_segundo": datos.get('nombre2'),
+    "telefono1": datos.get('telefono1'),
+    "telefono2": datos.get('telefono2'),
     });
 
     var requestOptions = {
@@ -28,7 +27,8 @@ var raw = JSON.stringify({
     redirect: 'follow'
     };
     
-    fetch("{{url}}/api/empleado/crear/", requestOptions)
+    fetch("http://127.0.0.1:5000/api/empleado/crear/", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
+});
