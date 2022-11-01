@@ -1,22 +1,4 @@
-class Empleado {
-    constructor(id, dpi, nit, nombres, apellidos, fecha, 
-        direccion, sexo, telefono, iggs, estadoCargo, estadoJornada) {
-        this.id = id;
-        this.dpi = dpi;
-        this.nit = nit;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.fecha = fecha;
-        this.direccion = direccion;
-        this.sexo = sexo;
-        this.telefono = telefono;
-        this.iggs = iggs;
-        this.estadoCargo = estadoCargo; 
-        this.estadoJornada = estadoJornada; }
-}
-
 function captura() {
-
         const id = document.getElementById("id").value;
         const dpi = document.getElementById("dpi").value;
         const nit = document.getElementById("nit").value;
@@ -85,8 +67,6 @@ function captura() {
             document.getElementById("estadoJornada").focus();
         }
     
-
-
         var empleado = new Empleado(id, dpi, nit, nombres, apellidos, fecha,
             direccion, sexo, telefono, iggs, estadoCargo,estadoJornada);
     
@@ -104,33 +84,6 @@ function captura() {
     localStorage.setItem("EstadoJornada", estadoJornada);
     console.log(empleado)
 
-    var jsonempleado = JSON.stringify(empleado);
-    console.log(jsonempleado)
+    // var jsonempleado = JSON.stringify(empleado);
+    // console.log(jsonempleado)
 };
-
-function mostrar() {
-    var ID = localStorage.getItem("Id");
-    var DPI = localStorage.getItem("Dpi");
-    var NIT = localStorage.getItem("Nit");
-    var NOMBRES = localStorage.getItem("Nombres");
-    var APELLIDOS = localStorage.getItem("Apellidos");
-    var FECHA = localStorage.getItem("Fecha");
-    var SEXO = localStorage.getItem("Sexo");
-    var TELEFONO = localStorage.getItem("Telefono");
-    var IGGS = localStorage.getItem("Iggs");
-    var ESTADOCARGO = localStorage.getItem("EstadoCargo");
-    var ESTADOJORNADA = localStorage.getItem("EstadoJornada");
-
-    document.getElementById("ID").innerHTML = ID;
-    document.getElementById("DPI").innerHTML = DPI;
-    document.getElementById("NIT").innerHTML = NIT;
-    document.getElementById("NOMBRES").innerHTML = NOMBRES;
-    document.getElementById("APELLIDOS").innerHTML = APELLIDOS;
-    document.getElementById("FECHA").innerHTML = FECHA;
-    document.getElementById("SEXO").innerHTML = SEXO;
-    document.getElementById("TELEFONO").innerHTML = TELEFONO;
-    document.getElementById("IGGS").innerHTML = IGGS;
-    document.getElementById("ESTADOCARGO").innerHTML = ESTADOCARGO;
-    document.getElementById("ESTADOJORNADA").innerHTML = ESTADOJORNADA;
-}
-

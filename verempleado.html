@@ -77,7 +77,7 @@
 </form>
 
     <script>
-    let url = '';
+    let url = '/api/empleado/crear/';
         fetch(url)
             .then( response => response.json() )
             .then( data => mostrarData(data) )
@@ -87,12 +87,11 @@
             console.log(data)
             let body = ""
             for (var i = 0; i < data.length; i++) {      
-            body+=`<tr><td>${data[i].id}</td><td>${data[i].name}</td><td>${data[i].email}</td></tr>`
+            body+=`<tr><td>${data[i].puesto_id}</td><td>${data[i].name}</td><td>${data[i].email}</td></tr>`
             }
             document.getElementById('data').innerHTML = body
             //console.log(body)
         }
-
     </script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 <body>
     <main>
         <h1>Generación de empleados</h1>
-        <form action="./js/mandar_datos" method="post">
+        <form action="" class="formulario" id="formulario">
             <div class='field'>
                 <label>Id empleado</label>
                 <input name='id' type='number' id="id" placeholder='0910' autocomplete />
@@ -26,34 +26,33 @@
                 <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
             </div>
             <div class='field'>
-                <label>Nombres del trabajador</label>
-                <input name='nombres' type='name' id="nombres" placeholder='Nombres' autocomplete />
+                <label>Primer Apellido</label>
+                <input name='nombres' type='name' id="apellido1" placeholder='Nombres' autocomplete />
             </div>
             <div class='field'>
-                <label>Apellidos del trabajador</label>
-                <input name='apellidos' type='name' id="apellidos" placeholder='Apellidos' autocomplete />
+                <label>Segundo Apellido</label>
+                <input name='nombres' type='name' id="apellido2" placeholder='Nombres' autocomplete />
+            </div>
+            <div class='field'>
+                <label>Primer nombre</label>
+                <input name='apellidos' type='name' id="nombre1" placeholder='Apellidos' autocomplete />
+            </div>
+            <div class='field'>
+                <label>Segundo nombre</label>
+                <input name='apellidos' type='name' id="nombre2" placeholder='Apellidos' autocomplete />
             </div>
             <div class='field'>
                 <label>Fecha de nacimiento</label>
                 <input name='fecha' type='date' id="fecha" placeholder='27-12-1999' autocomplete />
             </div>
             <div class='field'>
-                <label>Dirección</label>
-                <input name='direccion' type='name' id="direccion" placeholder='Guatemala Zona 1' autocomplete />
-            </div>
-            <div class="field">
-                <label>Sexo</label>
-                <select name='estadoSexo' id="estadoSexo" required>
-                    <option selected disabled>Sel. una opción</option>
-                    <option>Masculino</option>
-                    <option>Femenino</option>
-                </select>
+                <label>Teléfono</label>
+                <input name='telefono' type='number' id="telefono1" placeholder='0000-0000' autocomplete />
             </div>
             <div class='field'>
                 <label>Teléfono</label>
-                <input name='telefono' type='number' id="telefono" placeholder='0000-0000' autocomplete />
+                <input name='telefono' type='number' id="telefono2" placeholder='0000-0000' autocomplete />
             </div>
-            
             <div class='field'>
                 <label>Carné Iggs</label>
                 <input name='iggs' type='number' id="iggs" placeholder='Número de afilacion' autocomplete />
@@ -79,11 +78,17 @@
                     <option>Mixta</option>
                 </select>
             </div>
+            <div class='field'>
+                <label>Estado</label>
+                <select name='estadoEstado' id="estadoEstado" required>
+                    <option selected disabled>Sel. una opción</option>
+                    <option>Casado</option>
+                    <option>Soltero</option>
+                </select>
+            </div>
             
             <div class='submit'>
-                <button type="button" onclick="captura()">
-                    Generar
-                </button>
+                <button type="submit" class="formulario__btn">Enviar</button>
             </div>
             <section class="parte2__container container">
                 <a href="pagina.html" class="funcion_1">Volver</a>
@@ -92,7 +97,7 @@
     </main>
 
 
-    <script src="js/captura_de_datos_empleados.js"></script>
+    <script src="js/usuario.js"></script>
 
 </body>
 

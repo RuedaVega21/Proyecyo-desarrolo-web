@@ -1,5 +1,3 @@
-pip install virtualenv
-virtualenv venv
 py -m venv venv
 venv/Scripts/activate
 pip install flask-pymongo
