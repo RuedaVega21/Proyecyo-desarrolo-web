@@ -1,6 +1,5 @@
 formulario.addEventListener('submit', function(e){
     e.preventDefault();
-    console.log('funciona')
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     var datos = new FormData(formulario);
@@ -30,6 +29,6 @@ var raw = JSON.stringify({
     
     fetch("http://127.0.0.1:5000/api/empleado/crear/", requestOptions)
     .then(response => response.json())
-    .then(result => console.log(result.data.nombre_primero))
+    .then(result => console.log(result.data.apellido_primero))
     .catch(error => console.log('error', error));
 });

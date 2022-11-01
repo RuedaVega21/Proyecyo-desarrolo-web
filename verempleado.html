@@ -38,7 +38,7 @@
 <form><header class="hero">
     <nav class="nav container">
     <div class='submit'>
-        <button type="button" onclick="mostrarData(data)">
+        <button type="submit" onclick="">
         Ver empleado
         </button>
         <button type="button" >
@@ -55,19 +55,15 @@
     <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>Id empleado.</th>
             <th>Dpi</th>
-            <th>Nit</th>
+            <th>Carne Iggs</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Fecha de nacimiento</th>
-            <th>Direccion</th>
-            <th>Sexo</th>
-            <th>Telefono</th>
-            <th>Carne Iggs</th>
-            <th>Cargo</th>
+            <th>Nit</th>
             <th>Jornada</th>
-            <th>Eliminar</th>
+            <th>Telefono</th>
+            <th>Estado</th>
             </tr>
 
     </thead>
@@ -77,20 +73,30 @@
 </form>
 
     <script>
-    let url = '/api/empleado/crear/';
+        var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+    };
+
+    let url = "http://127.0.0.1:5000/api/empleado/ver/";
         fetch(url)
             .then( response => response.json() )
-            .then( data => mostrarData(data) )
+            .then( result => mostrarData(result) )
             .catch( error => console.log(error) )
 
-        const mostrarData = (data) => {
-            console.log(data)
-            let body = ""
-            for (var i = 0; i < data.length; i++) {      
-            body+=`<tr><td>${data[i].puesto_id}</td><td>${data[i].name}</td><td>${data[i].email}</td></tr>`
+        const mostrarData = (result) => {
+            console.log(result)
+            let body = ''
+            for (var i = 0; i < result.data.length; i++) {      
+                
+                body+=`<tr><td>${result.data[i].dpi}</td><td>${result.data[i].carnet_igss}</td>
+                <td>${result.data[i].nombre_primero}</td><td>${result.data[i].apellido_primero}</td>
+                <td>${result.data[i].fecha_nacimiento}</td><td>${result.data[i].nit}</td>
+                <td>${result.data[i].jornada}</td><td>${result.data[i].estado}</td>
+                <td>${result.data[i].nit}</td></tr>`
             }
             document.getElementById('data').innerHTML = body
-            //console.log(body)
+        console.log(body)
         }
     </script>
 </body>

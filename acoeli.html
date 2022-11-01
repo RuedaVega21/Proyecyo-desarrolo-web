@@ -36,27 +36,6 @@
         
         </form>
     </main>
-    <script type="text/javascript" >
-        let url = '';
-        $(document).ready(function(){
-            recargarLista();
-            $('id').change(function(){
-                recargarLista();
-            });
-        });
-    </script>
-    <script type="text/javascript" >
-            function recargarLista(){
-                $.ajax({
-                    type:"POST",
-                    url:"",
-                    data: "id" +$('id').val(),
-                success:function(r){
-                    $('id').html(r);
-                }
-                })
-            }
-        </script>
 </body>
 
 </html>
