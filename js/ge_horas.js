@@ -4,12 +4,19 @@ formulario.addEventListener('submit', function(e){
     myHeaders.append("Content-Type", "application/json");
     var datos = new FormData(formulario);
 
-var raw = JSON.stringify({
-    "cantidad": parseFloat(datos.get('cantidad')),
-    "fecha": datos.get('fecha'),
-    "empleado_id": datos.get('empleado_id'),
-    "valor_calculo": parseFloat(datos.get('valor_calculo')),
-});
+if(document.getElementById('Sumar').checked){
+    var raw = JSON.stringify({
+        "cantidad": parseFloat(datos.get('cantidad')),
+        "fecha": datos.get('fecha'),
+        "empleado_id": datos.get('select'),
+    });
+} else if(document.getElementById('Restar').checked){
+    var raw = JSON.stringify({
+        "cantidad": - parseFloat(datos.get('cantidad')),
+        "fecha": datos.get('fecha'),
+        "empleado_id": datos.get('select'),
+    });
+}
 
 var requestOptions = {
     method: 'POST',

@@ -14,24 +14,21 @@
         <h1>Generar hora extra</h1>
         <form action="" class="formulario" id="formulario">
             <div class=''>
-                <input type='radio' name="estado" id="cantidad" value="C">Sumar horas
-                <input type='radio' name="estado" id="porcentaje" value="P">Restar horas
+                <input type='radio' name="estado" id="Sumar" value="C">Sumar horas
+                <input type='radio' name="estado" id="Restar" value="P">Restar horas
                 <div class='field'>
-                <input name='canpor' type='number' id="canpor" placeholder='Colocar horas' autocomplete />
+                <input name='cantidad' type='number' id="cantidad" placeholder='Colocar horas' autocomplete />
             </div>
             </div>
             <div class='field'>
                 <label>Fecha</label>
                 <input name='fecha' type='date' id="fecha"  autocomplete />
             </div>
-
             <div class='field'>
-                <label>Id del empleado</label>
-                <input name='empleado_id' type='number' id="empleado_id"  autocomplete />
-            </div>
-            <div class='field'>
-                <label>Valor de hora</label>
-                <input name='valor_calculo' type='number' id="valor_calculo" placeholder='Valor' autocomplete />
+                <label class="">Id del empleado:  </label>
+                <select name="select" id="select" class="">
+                    <option value="id">Id empleado</option>
+                </select>
             </div>
             <div class='submit'>
                 <button type="submit" class="formulario__btn">Enviar</button>
@@ -48,3 +45,21 @@
 </body>
 
 </html>
+
+<script>
+    var url = "http://127.0.0.1:5000/api/empleado/ver/";
+        fetch(url).then(function(result){
+            if(result.ok){
+                return result.json();
+            }
+
+        }).then(function(data){
+            data.data.forEach(function(element){
+                let select = document.getElementById("select");
+                let opt = document.createElement("option");
+                opt.appendChild(document.createTextNode(element.nombre_segundo));
+                opt.value=String(element._id.$oid);
+                select.appendChild(opt);
+            })
+        })  
+</script>
