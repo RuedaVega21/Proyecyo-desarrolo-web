@@ -13,14 +13,18 @@
     <main>
         <h1>Generar hora extra</h1>
         <form action="" class="formulario" id="formulario">
-            <div class='field'>
-                <label>Cantidad de horas</label>
-                <input name='cantidad' type='number' id="cantidad" placeholder='Cuantas horas' autocomplete />
+            <div class=''>
+                <input type='radio' name="estado" id="cantidad" value="C">Sumar horas
+                <input type='radio' name="estado" id="porcentaje" value="P">Restar horas
+                <div class='field'>
+                <input name='canpor' type='number' id="canpor" placeholder='Colocar horas' autocomplete />
+            </div>
             </div>
             <div class='field'>
                 <label>Fecha</label>
                 <input name='fecha' type='date' id="fecha"  autocomplete />
             </div>
+
             <div class='field'>
                 <label>Id del empleado</label>
                 <input name='empleado_id' type='number' id="empleado_id"  autocomplete />
