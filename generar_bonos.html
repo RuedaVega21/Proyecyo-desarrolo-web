@@ -1,0 +1,76 @@
+<head>
+    <meta charset="utf-8">
+    <title>Generar bono</title>
+    <link rel="stylesheet" href="./css/master.css">
+    <link rel="shortcut icon" href="./Imagenes/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/estilo_planilla.css">
+</head>
+
+<body>
+    <main>
+        <h1>Generación de bonos</h1>
+        <form action="" class="formulario" id="formulario">
+            <div class=''>
+                <label class="">Bono:  </label>
+                <select name="select" id="id" class="">
+                    <option value="id">Seleccione el bono</option>
+                </select>
+            </div>
+            <div class=''>
+                <label class="">Id del empleado:  </label>
+                <select name="select" id="id" class="">
+                    <option value="id">Seleccione un empleado</option>
+                </select>
+            </div>
+            <div class='field'>
+            </div>
+            <div class='field'>
+                <label>Nombre del bono</label>
+                <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
+            </div>
+            <div class='field'>
+                <label>cantidad</label>
+                <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
+            </div>
+            <div class='field'>
+                <label>procentaje</label>
+                <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
+            </div>
+            <div class='field'>
+                <label>fecha</label>
+                <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
+            </div>
+            <div class='submit'>
+                <button type="submit" class="formulario__btn">Enviar</button>
+            </div>
+            <section class="parte2__container container">
+                <a href="pagina.html" class="funcion_1">Volver</a>
+            </section>
+        </form>
+    </main>
+
+    <script>
+        var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+    };
+
+    let url = "http://127.0.0.1:5000/api/bonos/ver/";
+        fetch(url)
+            .then( response => response.json() )
+            .then( result => mostrarData(result) )
+            .catch( error => console.log(error) )
+
+        const mostrarData = (result) => {
+            console.log(result)
+            let body = ''
+            for (var i = 0; i < result.data.length; i++) {      
+                body+=`<option value = $`
+            }
+            document.getElementById('data').innerHTML = body
+        console.log(body)
+        }
+    </script>
+</body>
+
+</html>

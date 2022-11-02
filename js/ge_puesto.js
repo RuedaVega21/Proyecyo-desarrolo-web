@@ -5,11 +5,11 @@ formulario.addEventListener('submit', function(e){
     var datos = new FormData(formulario);
 
     var raw = JSON.stringify({
-        "factor_hora_extra": datos.get('factor_hora_extra'),
-        "horas": datos.get('horas'),
+        "factor_hora_extra": parseFloat(datos.get('factor_hora_extra')),
+        "horas": parseFloat(datos.get('horas')),
         "nombre": datos.get('nombre'),
-        "precio": datos.get('precio'),
-        "sueldo": datos.get('sueldo')
+        "precio": parseFloat(datos.get('precio')),
+        "sueldo": parseFloat(datos.get('sueldo'))
     });
 
     var requestOptions = {

@@ -4,7 +4,6 @@ formulario.addEventListener('submit', function(e){
     myHeaders.append("Content-Type", "application/json");
     var datos = new FormData(formulario);
 
-
 var raw = JSON.stringify({
     "cantidad": datos.get('cantidad'),
     "fecha": datos.get('fecha'),
