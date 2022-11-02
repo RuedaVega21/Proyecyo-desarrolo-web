@@ -74,8 +74,6 @@
             data.data.forEach(function(element){
                 let select = document.getElementById("select");
                 let opt = document.createElement("option");
-                console.log(select)
-                console.log(opt)
                 opt.appendChild(document.createTextNode(element.nombre_segundo));
                 opt.value=String(element._id.$oid);
                 select.appendChild(opt);

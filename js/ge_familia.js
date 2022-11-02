@@ -12,7 +12,7 @@ var raw = JSON.stringify({
     "telefono1": datos.get('telefono1'),
     "telefono2": datos.get('telefono2'),
     "parentesco": datos.get('parentesco'),
-    "empleado_id": datos.get('empleado_id'),
+    "empleado_id": datos.get('select'),
 });
 
 var requestOptions = {
