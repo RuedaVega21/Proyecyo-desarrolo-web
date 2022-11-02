@@ -31,7 +31,7 @@
         </form>
     </main>
 
-    <script src="js/ge_bono.js"></script>
+    <script src="js/ge_bono_em.js"></script>
 
 </body>
 
@@ -52,10 +52,8 @@
                 opt.value=String(element._id.$oid);
                 select.appendChild(opt);
             })
-        })  
-</script>
+        })
 
-<script>
     var url = "http://127.0.0.1:5000/api/bono/ver/";
         fetch(url).then(function(result){
             if(result.ok){
@@ -70,6 +68,6 @@
                 opt.value=String(element._id.$oid);
                 select.appendChild(opt);
             })
-        })  
+        });  
 </script>
 

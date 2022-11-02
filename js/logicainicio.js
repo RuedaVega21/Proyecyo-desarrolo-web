@@ -1,43 +1,43 @@
-document.querySelector('#btnIngresar').addEventListener('click', inicarSesion());
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var datos = new FormData(formulario);
 
-function inicarSesion(){
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
+    var raw = JSON.stringify({
+        "correo": datos.get('correo'),
+        "nombre_usuario": datos.get('usuario'),
+        "empleado_id": datos.get('select')
+    });
+    console.log(raw);
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
 
-var raw = JSON.stringify({
-    "user": "Sebas_213",
-    "password": ""
-});
-
-var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
-};
-
-fetch("http://localhost:44490/api/login", requestOptions)
-    .then(response => response(text))
+    fetch("http://127.0.0.1:8000/api/crearUsuario", requestOptions)
+    .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
-    
-    response = JSON.parse(response.text)
-    if (response.status == "Success") {
-        ingresar();
-    }
-}
+});
 
-function ingresar() {
-    var rol = sessionStorage.getItem('rolActivo');
-    console.log(rol);
-    switch (rol) {
-        case '1':
-            console.log("pagina");
-            window.location.href = 'pagina.html';
-            break;
-        default:
-            console.log("index");
-            window.location.href = 'index.html';
-            break;
-    }
-}
+// if (response.status == "Success") {
+//         ingresar();
+// }
+
+// function ingresar() {
+//     var rol = sessionStorage.getItem('rolActivo');
+//     console.log(rol);
+//     switch (rol) {
+//         case '1':
+//             console.log("pagina");
+//             window.location.href = 'pagina.html';
+//             break;
+//         default:
+//             console.log("index");
+//             window.location.href = 'index.html';
+//             break;
+//     }
+// }

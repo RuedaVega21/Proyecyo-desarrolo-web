@@ -69,6 +69,13 @@
                     guion bajo.</p>
             </div>
 
+            <div class='field'>
+                <label class="">Id del empleado:  </label>
+                <select name="select" id="select" class="">
+                    <option value="id">Id empleado</option>
+                </select>
+            </div>
+
             <!-- <div class="formulario__grupo" id="grupo__telefono">
                 <label for="telefono" class="formulario__label">Teléfono</label>
                 <div class="formulario__grupo-input">
@@ -98,9 +105,27 @@
         </form>
     </main>
 
-    <script src="js/formulario.js"></script>
-    <!-- <script src="js/usuario.js"></script> -->
+    <!-- <script src="js/formulario.js"></script> -->
+    <script src="js/logicainicio.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+<script>
+    var url = "http://127.0.0.1:5000/api/empleado/ver/";
+        fetch(url).then(function(result){
+            if(result.ok){
+                return result.json();
+            }
+
+        }).then(function(data){
+            data.data.forEach(function(element){
+                let select = document.getElementById("select");
+                let opt = document.createElement("option");
+                opt.appendChild(document.createTextNode(element.nombre_primero + " " + element.nombre_segundo));
+                opt.value=String(element._id.$oid);
+                select.appendChild(opt);
+            })
+        })  
+</script>
