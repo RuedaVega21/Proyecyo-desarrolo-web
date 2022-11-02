@@ -86,7 +86,8 @@
             for (var i = 0; i < result.data.length; i++) {      
                 
                 body+=`<tr><td>${result.data[i].dpi}</td><td>${result.data[i].carnet_igss}</td>
-                <td>${result.data[i].nombre_primero}</td><td>${result.data[i].apellido_primero}</td>
+                <td>${result.data[i].nombre_primero + " " + result.data[i].nombre_segundo}</td>
+                <td>${result.data[i].apellido_primero + " " + result.data[i].apellido_segundo}</td>
                 <td>${result.data[i].fecha_nacimiento}</td><td>${result.data[i].nit}</td>
                 <td>${result.data[i].jornada}</td><td>${result.data[i].telefono1}</td>
                 <td>${result.data[i].estado}</td>
@@ -103,9 +104,6 @@
         console.log(body)
         }
 
-        function editar(){
-            
-        }
         function eliminar(id){
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -125,7 +123,7 @@
             .then(response => response.json())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
-                    }
+        }
 
     </script>
 </body>

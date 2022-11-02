@@ -26,7 +26,7 @@
                 <input name='apellido_primero' type='name' id="apellido_primero" placeholder="Primer apellido del familiar" autocomplete />
             </div>
             <div class='field'>
-                <label>Segundo apellodp</label>
+                <label>Segundo apellido</label>
                 <input name='apellido_segundo' type='name' id="apellido_segundo" placeholder="Siguiente apellido" autocomplete />
             </div>
             <div class='field'>
@@ -74,7 +74,7 @@
             data.data.forEach(function(element){
                 let select = document.getElementById("select");
                 let opt = document.createElement("option");
-                opt.appendChild(document.createTextNode(element.nombre_segundo));
+                opt.appendChild(document.createTextNode(element.nombre_primero + " " + element.nombre_segundo));
                 opt.value=String(element._id.$oid);
                 select.appendChild(opt);
             })
