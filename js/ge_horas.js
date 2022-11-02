@@ -5,11 +5,11 @@ formulario.addEventListener('submit', function(e){
     var datos = new FormData(formulario);
 
 var raw = JSON.stringify({
-    "cantidad": datos.get('cantidad'),
+    "cantidad": parseFloat(datos.get('cantidad')),
     "fecha": datos.get('fecha'),
     "planilla_id": datos.get('planilla_id'),
     "empleado_id": datos.get('empleado_id'),
-    "valor_calculo": datos.get('valor_calculo'),
+    "valor_calculo": parseFloat(datos.get('valor_calculo')),
 });
 
 var requestOptions = {

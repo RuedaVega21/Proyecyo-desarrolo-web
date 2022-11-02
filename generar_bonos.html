@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    <title>Generar bono</title>
+    <title>Generar puesto</title>
     <link rel="stylesheet" href="./css/master.css">
     <link rel="shortcut icon" href="./Imagenes/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/estilo_planilla.css">
@@ -8,36 +8,27 @@
 
 <body>
     <main>
-        <h1>Generación de bonos</h1>
+        <h1>Generación de bono</h1>
         <form action="" class="formulario" id="formulario">
-            <div class=''>
-                <label class="">Bono:  </label>
-                <select name="select" id="id" class="">
-                    <option value="id">Seleccione el bono</option>
-                </select>
-            </div>
-            <div class=''>
+            <div class='field'>
                 <label class="">Id del empleado:  </label>
                 <select name="select" id="id" class="">
-                    <option value="id">Seleccione un empleado</option>
+                    <option value="id">Id empleado</option>
                 </select>
             </div>
-            <div class='field'>
+            <div class=''>
+                <input type='radio' name="estado" value="C">Cantidad
+                <input type='radio' name="estado" value="P"> Porcentaje
+                <div class='field'>
+                <input name='nit' type='number' id="nit" placeholder='Cantidad/Procentaje' autocomplete />
+            </div>
             </div>
             <div class='field'>
-                <label>Nombre del bono</label>
+                <label>Fecha</label>
                 <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
             </div>
             <div class='field'>
-                <label>cantidad</label>
-                <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
-            </div>
-            <div class='field'>
-                <label>procentaje</label>
-                <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
-            </div>
-            <div class='field'>
-                <label>fecha</label>
+                <label>Fecha</label>
                 <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
             </div>
             <div class='submit'>
