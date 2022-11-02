@@ -94,7 +94,7 @@
 </html>
 
 <script>
-    var url = "http://127.0.0.1:5000/api/empleado/ver/";
+    var url = "http://127.0.0.1:5000/api/puesto/ver/";
         fetch(url).then(function(result){
             if(result.ok){
                 return result.json();
@@ -102,7 +102,7 @@
 
         }).then(function(data){
             data.data.forEach(function(element){
-                let select = document.getElementById("estadoEstado");
+                let select = document.getElementById("estadoCargo");
                 let opt = document.createElement("option");
                 console.log(select)
                 console.log(opt)
