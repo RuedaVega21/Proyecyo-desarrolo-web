@@ -3,6 +3,12 @@ formulario.addEventListener('submit', function(e){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     var datos = new FormData(formulario);
+    const apellido1 = document.getElementById("apellido1").value;
+
+    if (apellido1 == '') {
+        alert("El campo id no puede quedarse vacio");
+        document.getElementById("apellido1").focus();
+    } 
 
 var raw = JSON.stringify({
     "apellido_primero": datos.get('apellido1'),

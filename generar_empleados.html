@@ -54,16 +54,9 @@
                 <input name='iggs' type='number' id="iggs" placeholder='Número de afilacion' autocomplete />
             </div>
             <div class='field'>
-                <label>Cargo</label>
+                <label>Puesto</label>
                 <select name='estadoCargo' id="estadoCargo" required>
                     <option selected disabled>Sel. una opción</option>
-                    <option value="1235">Front-End</option>
-                    
-                    <option>Back-End</option>
-                    <option>Bases de datos</option>
-                    <option>Full stack</option>
-                    <option>Redes</option>
-                    <option>Servicio técnico</option>
                 </select>
             </div>
             <div class='field'>
@@ -99,3 +92,23 @@
 </body>
 
 </html>
+
+<script>
+    var url = "http://127.0.0.1:5000/api/empleado/ver/";
+        fetch(url).then(function(result){
+            if(result.ok){
+                return result.json();
+            }
+
+        }).then(function(data){
+            data.data.forEach(function(element){
+                let select = document.getElementById("estadoEstado");
+                let opt = document.createElement("option");
+                console.log(select)
+                console.log(opt)
+                opt.appendChild(document.createTextNode(element.nombre));
+                opt.value=String(element._id.$oid);
+                select.appendChild(opt);
+            })
+        })  
+</script>

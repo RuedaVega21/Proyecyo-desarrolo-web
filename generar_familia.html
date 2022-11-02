@@ -42,8 +42,10 @@
                 <input name='parentesco' type='name' id="parentesco" placeholder='Mama/Papa/Herman@' autocomplete />
             </div>
             <div class='field'>
-                <label>Id del empleado</label>
-                <input name='empleado_id' type='number' id="empleado_id" placeholder='Id' autocomplete />
+                <label class="">Id del empleado:  </label>
+                <select name="select" id="select" class="">
+                    <option value="id">Id empleado</option>
+                </select>
             </div>
             <div class='submit'>
                 <button type="submit" class="formulario__btn">Enviar</button>
@@ -60,3 +62,23 @@
 </body>
 
 </html>
+
+<script>
+    var url = "http://127.0.0.1:5000/api/empleado/ver/";
+        fetch(url).then(function(result){
+            if(result.ok){
+                return result.json();
+            }
+
+        }).then(function(data){
+            data.data.forEach(function(element){
+                let select = document.getElementById("select");
+                let opt = document.createElement("option");
+                console.log(select)
+                console.log(opt)
+                opt.appendChild(document.createTextNode(element.nombre_segundo));
+                opt.value=String(element._id.$oid);
+                select.appendChild(opt);
+            })
+        })  
+</script>
