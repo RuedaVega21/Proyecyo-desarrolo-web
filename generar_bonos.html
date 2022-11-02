@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    <title>Generar puesto</title>
+    <title>Generar bono</title>
     <link rel="stylesheet" href="./css/master.css">
     <link rel="shortcut icon" href="./Imagenes/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/estilo_planilla.css">
@@ -17,19 +17,19 @@
                 </select>
             </div>
             <div class=''>
-                <input type='radio' name="estado" value="C">Cantidad
-                <input type='radio' name="estado" value="P"> Porcentaje
+                <input type='radio' name="estado" id="cantidad" value="C">Cantidad
+                <input type='radio' name="estado" id="porcentaje" value="P"> Porcentaje
                 <div class='field'>
                 <input name='nit' type='number' id="nit" placeholder='Cantidad/Procentaje' autocomplete />
             </div>
             </div>
             <div class='field'>
-                <label>Fecha</label>
-                <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
+                <label>Nombre</label>
+                <input name='nombre' type='name' id="nombre" placeholder='Nombre del bono' autocomplete />
             </div>
             <div class='field'>
-                <label>Fecha</label>
-                <input name='nit' type='number' id="nit" placeholder='101577923' autocomplete />
+                <label>Fecha de creación</label>
+                <input name='fecha_aplicacion' type='date' id="fecha_aplicacion" autocomplete />
             </div>
             <div class='submit'>
                 <button type="submit" class="formulario__btn">Enviar</button>
