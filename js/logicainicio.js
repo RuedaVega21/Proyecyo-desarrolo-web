@@ -9,6 +9,7 @@ formulario.addEventListener('submit', function(e){
         "nombre_usuario": datos.get('usuario'),
         "empleado_id": datos.get('select')
     });
+    
     console.log(raw);
     var requestOptions = {
         method: 'POST',
