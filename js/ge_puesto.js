@@ -21,6 +21,16 @@ formulario.addEventListener('submit', function(e){
     
     fetch("http://127.0.0.1:5000/api/puesto/crear/", requestOptions)
     .then(response => response.json())
-    .then(result => console.log(result))
+    .then(result => ingresar(result))
     .catch(error => console.log('error', error));
+
+    function ingresar(result) {
+        console.log(result.status)
+        if (result.status == "Success") {
+            alert("Puesto creado");
+            window.location.href = "generar_puesto.html";
+        }else{ 
+            alert(result.detail)
+        }
+    }
 });

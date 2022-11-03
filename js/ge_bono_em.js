@@ -18,6 +18,16 @@
 
     fetch("http://127.0.0.1:8000/api/actualizarBonoEmpleado", requestOptions)
     .then(response => response.json())
-    .then(result => console.log(result))
+    .then(result => ingresar(result))
     .catch(error => console.log('error', error));
+
+    function ingresar(result) {
+        console.log(result.status)
+        if (result.status == "Success") {
+            alert("Bono creado");
+            window.location.href = "generar_bono.html";
+        }else{ 
+            alert(result.detail)
+        }
+    }
 });
