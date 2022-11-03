@@ -1,27 +1,33 @@
-function obtenerUsuarios(){
-    var listaUsuarios = JSON.parse(localStorage.getItem('listaUsuarios'));
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var datos = new FormData(formulario);
 
-    if (listaUsuarios == null){
-        listaUsuarios = [
-            ['1', 'Sebas', 'Rueda', 'jruedav@miumg.edu.gt', 'sebas', '1999-27-12', '1']
-        ]
-    }
-    return listaUsuarios;
-}
+    var raw = JSON.stringify({
+        "correo": datos.get('txtCorreo'),
+        "contraseña": datos.get('txtContra')
+    });
 
-function ValidarUsuario(Correo, Contra){
-    var listaUsuarios = obtenerUsuarios();
-    var Acesso = false;
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
 
-    for (var i = 0; i < listaUsuarios.length; i++){
-        console.log(listaUsuarios[i][3] && Contra == listaUsuarios[i][4])
-        if (Correo == listaUsuarios[i][3] && Contra == listaUsuarios[i][4]) {
-            Acesso = true;
-            sessionStorage.setItem('usuarioActivo', listaUsuarios[i][1] + ' ' + listaUsuarios[i][2]);
-            sessionStorage.setItem('rolActivo', listaUsuarios[i][6]);
+    fetch("http://127.0.0.1:8000/api/login", requestOptions)
+    .then(response => response.json())
+    .then(result => ingresar(result))
+    .catch(error => console.log('error', error));
+
+    function ingresar(result) {
+        console.log(result.status)
+        if (result.status == "Success") {
+            window.location.href = "pagina.html";
+        }else{ 
+            alert(result.detail)
         }
-        console.log(sessionStorage.getItem('rolActivo'));
-            
     }
-    return Acesso;
-}
+});
+

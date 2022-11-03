@@ -7,6 +7,23 @@ body {
   height: 100vh;
 }
 
+.button {
+  padding: 15px 68px;
+  text-align: center;
+  display: inline-block;
+}
+
+.btnIngresar {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 .login-box {
   width: 320px;
   height: 420px;
